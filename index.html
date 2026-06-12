@@ -183,7 +183,7 @@ section{padding:100px 48px;max-width:1400px;margin:0 auto}
 .reviews-track-wrap::before,.reviews-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
 .reviews-track-wrap::before{left:0;background:linear-gradient(to right,var(--charcoal),transparent)}
 .reviews-track-wrap::after{right:0;background:linear-gradient(to left,var(--charcoal),transparent)}
-.reviews-track{display:flex;gap:20px;animation:scrollReviews 40s linear infinite;width:max-content}
+.reviews-track{display:flex;gap:20px;animation:scrollReviews 60s linear infinite;width:max-content}
 .reviews-track:hover{animation-play-state:paused}
 @keyframes scrollReviews{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .review-card{background:var(--black);border:1px solid var(--border-green);padding:32px;width:380px;flex-shrink:0;position:relative;transition:border-color 0.3s}
@@ -276,7 +276,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
 .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ── FORMSPREE FORM STATES ── */
+/* FORMSPREE FORM STATES */
 .form-submitting .btn-submit-main{opacity:0.6;pointer-events:none;cursor:not-allowed}
 .form-submitting .btn-submit-main::after{content:' ...'}
 .form-success-msg{display:none;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.4);padding:20px 24px;border-radius:4px;text-align:center}
@@ -292,21 +292,16 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
 /* TRANSFORMATION GALLERY */
 .transform-gallery{background:var(--charcoal);max-width:100%;padding:100px 48px}
 .transform-gallery-inner{max-width:1400px;margin:0 auto}
-
 .tg-tabs{display:flex;gap:0;margin-bottom:48px;border:1px solid var(--border-green);width:fit-content}
 .tg-tab{padding:12px 28px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:transparent;font-family:'DM Sans',sans-serif;transition:all 0.3s;position:relative}
 .tg-tab:not(:last-child){border-right:1px solid var(--border-green)}
 .tg-tab.active{background:var(--gold);color:var(--black);font-weight:700}
 .tg-tab:hover:not(.active){color:var(--gold);background:rgba(212,175,55,0.06)}
-
 .tg-panel{display:none}
 .tg-panel.active{display:grid}
 .tg-grid-3{grid-template-columns:repeat(3,1fr);gap:2px}
-
 .tg-card{position:relative;background:var(--black);overflow:hidden;border:1px solid var(--border-green);transition:border-color 0.3s}
 .tg-card:hover{border-color:rgba(212,175,55,0.45)}
-
-/* Before/After split card */
 .tg-ba-card{position:relative;background:var(--black);border:1px solid var(--border-green);overflow:hidden;transition:border-color 0.3s}
 .tg-ba-card:hover{border-color:rgba(212,175,55,0.45)}
 .tg-ba-split{display:grid;grid-template-columns:1fr 1fr;height:340px}
@@ -324,14 +319,10 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
 .tg-ba-meta{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:2px}
 .tg-ba-result{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold);line-height:1}
 .tg-ba-result span{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-family:'DM Sans',sans-serif;text-align:right;margin-top:2px}
-
-/* Stats strip */
 .tg-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-green);margin-bottom:48px}
 .tg-stat-box{background:var(--black);padding:28px 20px;text-align:center}
 .tg-stat-num{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--gold);line-height:1;display:block}
 .tg-stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;display:block}
-
-/* CTA row */
 .tg-cta-row{margin-top:48px;text-align:center;padding:48px 0 0;border-top:1px solid var(--border-green)}
 .tg-cta-row p{font-size:14px;color:var(--muted);margin-bottom:24px}
 
@@ -344,7 +335,6 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
   .tg-grid-3,.tg-video-grid{grid-template-columns:1fr}
   .tg-ba-split{height:260px}
   .tg-ba-result{font-size:22px}
-  .tg-video-thumb{height:180px}
   .tg-cta-row{margin-top:32px;padding-top:32px}
   nav{padding:14px 20px}
   nav.scrolled{padding:12px 20px}
@@ -507,7 +497,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
   <div class="hero-content">
     <div class="hero-badge">Bhopal's Premier Transformation Center</div>
     <h1 class="hero-headline">Become <em>Better</em><br>Every Day.</h1>
-    <p class="hero-sub">Elite coaching, world-class equipment & a community forged for transformation. The word Kaizen means continuous improvement — 1% better, every single day.</p>
+    <p class="hero-sub">Elite coaching, world-class equipment &amp; a community forged for transformation. The word Kaizen means continuous improvement — 1% better, every single day.</p>
     <div class="hero-buttons">
       <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start Your Transformation</button>
       <button class="btn-outline" onclick="document.getElementById('membership').scrollIntoView({behavior:'smooth'})">View Membership</button>
@@ -588,7 +578,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-num">01 — Strength Training</div>
-        <h3>Strength & Muscle Building</h3>
+        <h3>Strength &amp; Muscle Building</h3>
         <p>Progressive overload programs designed to maximize hypertrophy and raw strength. Periodized training that evolves with you, week after week.</p>
         <div class="service-tags"><span class="tag">Progressive Overload</span><span class="tag">Hypertrophy</span><span class="tag">Powerlifting</span></div>
       </div>
@@ -634,11 +624,11 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
         </div>
         <div class="trainer-front-bottom">
           <div class="trainer-front-name">HITESH</div>
-          <div class="trainer-front-role">Strength & Hypertrophy</div>
+          <div class="trainer-front-role">Strength &amp; Hypertrophy</div>
         </div>
         <div class="trainer-overlay">
           <div class="trainer-overlay-name">HITESH</div>
-          <div class="trainer-overlay-role">Head Coach — Strength & Hypertrophy</div>
+          <div class="trainer-overlay-role">Head Coach — Strength &amp; Hypertrophy</div>
           <p class="trainer-bio">8 years of competitive powerlifting experience. Specializes in progressive overload programming and elite body recomposition for serious athletes.</p>
           <div class="trainer-stats">
             <div class="trainer-stat"><span class="trainer-stat-num">8+</span><span class="trainer-stat-label">Years Exp.</span></div>
@@ -649,7 +639,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
         </div>
         <div class="trainer-mobile-info">
           <div class="trainer-overlay-name">HITESH</div>
-          <span class="trainer-overlay-role">Head Coach — Strength & Hypertrophy</span>
+          <span class="trainer-overlay-role">Head Coach — Strength &amp; Hypertrophy</span>
           <p class="trainer-bio">8 years of competitive powerlifting experience. Specializes in progressive overload programming and elite body recomposition for serious athletes.</p>
           <div class="trainer-mobile-stats">
             <div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">8+</span><span class="trainer-mobile-stat-label">Years Exp.</span></div>
@@ -671,11 +661,11 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
         </div>
         <div class="trainer-front-bottom">
           <div class="trainer-front-name">SHALU</div>
-          <div class="trainer-front-role">Fat Loss & Nutrition</div>
+          <div class="trainer-front-role">Fat Loss &amp; Nutrition</div>
         </div>
         <div class="trainer-overlay">
           <div class="trainer-overlay-name">SHALU</div>
-          <div class="trainer-overlay-role">Fat Loss & Nutrition</div>
+          <div class="trainer-overlay-role">Fat Loss &amp; Nutrition</div>
           <p class="trainer-bio">Certified nutrition coach with 200+ successful transformations. Believes sustainable habits beat crash diets — every single time.</p>
           <div class="trainer-stats">
             <div class="trainer-stat"><span class="trainer-stat-num">6+</span><span class="trainer-stat-label">Years Exp.</span></div>
@@ -686,7 +676,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
         </div>
         <div class="trainer-mobile-info">
           <div class="trainer-overlay-name">SHALU</div>
-          <span class="trainer-overlay-role">Fat Loss & Nutrition</span>
+          <span class="trainer-overlay-role">Fat Loss &amp; Nutrition</span>
           <p class="trainer-bio">Certified nutrition coach with 200+ successful transformations. Believes sustainable habits beat crash diets — every single time.</p>
           <div class="trainer-mobile-stats">
             <div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">6+</span><span class="trainer-mobile-stat-label">Years Exp.</span></div>
@@ -751,7 +741,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
       <div class="gallery-item" onclick="openLightbox(2)"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Cardio Zone"><div class="gallery-item-overlay"><span class="gallery-item-label">Cardio Zone</span></div></div>
       <div class="gallery-item" onclick="openLightbox(3)"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="Coaching Session"><div class="gallery-item-overlay"><span class="gallery-item-label">1-on-1 Coaching</span></div></div>
       <div class="gallery-item" onclick="openLightbox(4)"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="Strength Training"><div class="gallery-item-overlay"><span class="gallery-item-label">Strength Training</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(5)"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Members Training"><div class="gallery-item-overlay"><span class="gallery-item-label">Community & Culture</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(5)"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Members Training"><div class="gallery-item-overlay"><span class="gallery-item-label">Community &amp; Culture</span></div></div>
     </div>
   </div>
 </section>
@@ -766,272 +756,38 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
 <!-- TRANSFORMATION GALLERY -->
 <section class="transform-gallery" id="transformations">
   <div class="transform-gallery-inner">
-
     <div class="section-header reveal">
       <div class="section-eyebrow">Real Results</div>
       <h2 class="section-title">Member <em>Transformations.</em></h2>
       <p class="section-subtitle">Real people, real results. Every body you see below walked through our doors just like you — with a goal, a doubt, and a decision to change.</p>
     </div>
-
-    <!-- Stats Strip -->
     <div class="tg-stats-strip reveal">
-      <div class="tg-stat-box">
-        <span class="tg-stat-num">200+</span>
-        <span class="tg-stat-label">Transformations Completed</span>
-      </div>
-      <div class="tg-stat-box">
-        <span class="tg-stat-num">12kg</span>
-        <span class="tg-stat-label">Avg. Fat Loss (3 months)</span>
-      </div>
-      <div class="tg-stat-box">
-        <span class="tg-stat-num">8wks</span>
-        <span class="tg-stat-label">Avg. Visible Change</span>
-      </div>
-      <div class="tg-stat-box">
-        <span class="tg-stat-num">96%</span>
-        <span class="tg-stat-label">Member Satisfaction</span>
-      </div>
+      <div class="tg-stat-box"><span class="tg-stat-num">200+</span><span class="tg-stat-label">Transformations Completed</span></div>
+      <div class="tg-stat-box"><span class="tg-stat-num">12kg</span><span class="tg-stat-label">Avg. Fat Loss (3 months)</span></div>
+      <div class="tg-stat-box"><span class="tg-stat-num">8wks</span><span class="tg-stat-label">Avg. Visible Change</span></div>
+      <div class="tg-stat-box"><span class="tg-stat-num">96%</span><span class="tg-stat-label">Member Satisfaction</span></div>
     </div>
-
-    <!-- Tabs -->
     <div class="tg-tabs reveal">
       <button class="tg-tab active" onclick="switchTgTab(this,'fat-loss')">Fat Loss</button>
       <button class="tg-tab" onclick="switchTgTab(this,'muscle-gain')">Muscle Gain</button>
-
     </div>
-
-    <!-- FAT LOSS TAB -->
     <div class="tg-panel active tg-grid-3" id="tg-fat-loss">
-
-      <div class="tg-ba-card reveal">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Rohan K.</div>
-            <div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−12 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.1s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Priya S.</div>
-            <div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−15 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.2s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Vikram D.</div>
-            <div class="tg-ba-meta">BHEL · 2 Months · Performance Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−9 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Ananya M.</div>
-            <div class="tg-ba-meta">Bhopal · 5 Months · Transformation Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−18 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.1s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Kavita R.</div>
-            <div class="tg-ba-meta">Awadhpuri · 3 Months · Performance Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−11 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.2s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Suresh B.</div>
-            <div class="tg-ba-meta">BHEL · 6 Months · Transformation Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">−22 kg</div>
-            <span>Fat Lost</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="tg-ba-card reveal"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.1s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.2s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Vikram D.</div><div class="tg-ba-meta">BHEL · 2 Months · Performance Plan</div></div><div><div class="tg-ba-result">−9 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card reveal"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Ananya M.</div><div class="tg-ba-meta">Bhopal · 5 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−18 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.1s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Kavita R.</div><div class="tg-ba-meta">Awadhpuri · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−11 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.2s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Suresh B.</div><div class="tg-ba-meta">BHEL · 6 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−22 kg</div><span>Fat Lost</span></div></div></div>
     </div>
-
-    <!-- MUSCLE GAIN TAB -->
     <div class="tg-panel tg-grid-3" id="tg-muscle-gain">
-
-      <div class="tg-ba-card reveal">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Amit J.</div>
-            <div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">+8 kg</div>
-            <span>Muscle Gained</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.1s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Deepak T.</div>
-            <div class="tg-ba-meta">Bhopal · 6 Months · Transformation Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">+12 kg</div>
-            <span>Muscle Gained</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tg-ba-card reveal" style="transition-delay:0.2s">
-        <div class="tg-ba-split">
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" alt="Before">
-            <span class="tg-ba-label before">Before</span>
-          </div>
-          <div class="tg-ba-side">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="After">
-            <span class="tg-ba-label after">After</span>
-          </div>
-          <div class="tg-ba-divider"></div>
-        </div>
-        <div class="tg-ba-info">
-          <div>
-            <div class="tg-ba-name">Rahul P.</div>
-            <div class="tg-ba-meta">Awadhpuri · 5 Months · Performance Plan</div>
-          </div>
-          <div>
-            <div class="tg-ba-result">+10 kg</div>
-            <span>Muscle Gained</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="tg-ba-card reveal"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.1s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Deepak T.</div><div class="tg-ba-meta">Bhopal · 6 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+12 kg</div><span>Muscle Gained</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.2s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" alt="Before"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="After"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rahul P.</div><div class="tg-ba-meta">Awadhpuri · 5 Months · Performance Plan</div></div><div><div class="tg-ba-result">+10 kg</div><span>Muscle Gained</span></div></div></div>
     </div>
-
-    <!-- CTA -->
     <div class="tg-cta-row reveal">
       <p>Ready to write your own transformation story?</p>
       <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start Your Free Trial Today</button>
     </div>
-
   </div>
 </section>
 
@@ -1078,7 +834,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- REVIEWS — Real Google Reviews -->
 <section class="reviews" id="reviews">
   <div class="reviews-inner">
     <div class="reviews-header reveal">
@@ -1090,21 +846,153 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
         <div class="reviews-score">4.9</div>
         <div class="reviews-score-detail">
           <div class="reviews-stars-row"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <div class="reviews-count">Based on 120+ reviews</div>
+          <div class="reviews-count">Based on 120+ Google Reviews</div>
         </div>
       </div>
     </div>
   </div>
   <div class="reviews-track-wrap reveal">
     <div class="reviews-track" id="reviewsTrack">
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">RK</div><div class="reviewer-info"><h4>Rohan Khatri</h4><span>Bhopal, MP</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Best gym in Bhopal, no doubt. The trainers actually care about your progress. Lost 12 kg in 3 months and I've never felt stronger. The environment here pushes you to give your best every single day."</p></div>
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">PS</div><div class="reviewer-info"><h4>Priya Sharma</h4><span>Awadhpuri, Bhopal</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"I was nervous to join a gym for the first time but the team at Kaizen made me feel so comfortable. The free trial was what convinced me. Now 4 months in and the results are incredible."</p></div>
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">AJ</div><div class="reviewer-info"><h4>Amit Joshi</h4><span>BHEL, Bhopal</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"World-class equipment and even better coaching. Arjun sir's training program helped me add 40 kg to my deadlift in just 2 months. The atmosphere here is unmatched in Bhopal."</p></div>
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">NV</div><div class="reviewer-info"><h4>Neha Verma</h4><span>Bhopal, MP</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Shruti ma'am's nutrition guidance changed everything for me. I was doing everything wrong before. Now I eat better, train smarter, and feel amazing. Kaizen is not just a gym — it's a lifestyle."</p></div>
-      <!-- duplicates for infinite scroll -->
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">RK</div><div class="reviewer-info"><h4>Rohan Khatri</h4><span>Bhopal, MP</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Best gym in Bhopal, no doubt. The trainers actually care about your progress. Lost 12 kg in 3 months and I've never felt stronger. The environment here pushes you to give your best every single day."</p></div>
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">PS</div><div class="reviewer-info"><h4>Priya Sharma</h4><span>Awadhpuri, Bhopal</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"I was nervous to join a gym for the first time but the team at Kaizen made me feel so comfortable. The free trial was what convinced me. Now 4 months in and the results are incredible."</p></div>
-      <div class="review-card"><div class="review-top"><div class="reviewer-avatar">AJ</div><div class="reviewer-info"><h4>Amit Joshi</h4><span>BHEL, Bhopal</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"World-class equipment and even better coaching. Arjun sir's training program helped me add 40 kg to my deadlift in just 2 months. The atmosphere here is unmatched in Bhopal."</p></div>
+
+      <!-- REAL GOOGLE REVIEWS -->
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">HK</div>
+          <div class="reviewer-info"><h4>Harsh Kamatkar</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Equipment and facilities are top notch, but most importantly the trainers are certified &amp; highly skilled. When I came here I had zero knowledge about fitness — I'm grateful to Hitesh Sir for guiding me and helping me transform my body. He truly has deep knowledge about fitness, muscle anatomy, and nutrition. Highly Recommended! 🏋️"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SP</div>
+          <div class="reviewer-info"><h4>Saurabh Pandit</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"What I really appreciate is the motivation and discipline maintained throughout sessions. The trainer pushes you to give your best while understanding your limits. Diet and lifestyle tips are also shared, which helps achieve faster and long-term results. Great environment, positive energy, and excellent results. 100% satisfied and highly recommended!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SS</div>
+          <div class="reviewer-info"><h4>Shikha Soni</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Great, clean, well-equipped gym with very knowledgeable trainers — Hitesh Sir and Shalu Ma'am. I've known them for a very long time and they helped me achieve my fitness goal. Super safe, very clean and good crowd. I highly recommend them to everyone for starting their fitness journey."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">JS</div>
+          <div class="reviewer-info"><h4>Juhi Shekhar</h4><span>3 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Wonderful ambience and a very well-equipped gym. The trainers are highly qualified and truly motivated me to stay physically active. I would totally recommend it to everyone!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SV</div>
+          <div class="reviewer-info"><h4>Sagar Vishwakarma</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"One of the best gyms out there with proper trainer facilities and new, well-maintained equipment along with great hygiene and a separate floor for clients with trainers."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">ST</div>
+          <div class="reviewer-info"><h4>Sangam Thakre</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Clean environment, well-maintained machines aur trainers bhi kaafi supportive hain. Workout ka proper guidance milta hai aur atmosphere motivating rehta hai. Beginners ke liye bhi achha gym hai. Highly recommended."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">AR</div>
+          <div class="reviewer-info"><h4>Anjali Rathore</h4><span>3 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"This gym has a great atmosphere and very supportive trainers. The equipment is clean and well-maintained. Highly recommended!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">AP</div>
+          <div class="reviewer-info"><h4>Ankit Singh Parihar</h4><span>3 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"I've had a fantastic experience here, and a big part of that is thanks to my trainer Hitesh. He is extremely knowledgeable and motivating, always tailoring workouts to my fitness level and goals. His guidance has helped me improve not just physically but also in building discipline and confidence. Highly recommend both the gym and Hitesh to anyone serious about their fitness journey!"</p>
+      </div>
+
+      <!-- DUPLICATES for seamless infinite scroll -->
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">HK</div>
+          <div class="reviewer-info"><h4>Harsh Kamatkar</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Equipment and facilities are top notch, but most importantly the trainers are certified &amp; highly skilled. When I came here I had zero knowledge about fitness — I'm grateful to Hitesh Sir for guiding me and helping me transform my body. Highly Recommended! 🏋️"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SP</div>
+          <div class="reviewer-info"><h4>Saurabh Pandit</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"What I really appreciate is the motivation and discipline maintained throughout sessions. Great environment, positive energy, and excellent results. 100% satisfied and highly recommended!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SS</div>
+          <div class="reviewer-info"><h4>Shikha Soni</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Great, clean, well-equipped gym with very knowledgeable trainers — Hitesh Sir and Shalu Ma'am. They helped me achieve my fitness goal. Super safe, very clean and good crowd. Highly recommend!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">AP</div>
+          <div class="reviewer-info"><h4>Ankit Singh Parihar</h4><span>3 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Hitesh is extremely knowledgeable and motivating, always tailoring workouts to my fitness level. His guidance has helped me improve physically and build discipline and confidence. Highly recommend both the gym and Hitesh!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">JS</div>
+          <div class="reviewer-info"><h4>Juhi Shekhar</h4><span>3 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Wonderful ambience and a very well-equipped gym. The trainers are highly qualified and truly motivated me to stay physically active. I would totally recommend it to everyone!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">ST</div>
+          <div class="reviewer-info"><h4>Sangam Thakre</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Clean environment, well-maintained machines aur trainers bhi kaafi supportive hain. Workout ka proper guidance milta hai aur atmosphere motivating rehta hai. Highly recommended."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-avatar">SV</div>
+          <div class="reviewer-info"><h4>Sagar Vishwakarma</h4><span>4 months ago · Google</span></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"One of the best gyms out there with proper trainer facilities, new and well-maintained equipment, great hygiene, and a separate floor for clients with trainers."</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1132,113 +1020,55 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
   </div>
 </section>
 
-<!-- CONTACT — Formspree integrated -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-left">
     <div class="contact-left-inner">
       <div class="section-eyebrow">Free Trial</div>
       <h2 class="section-title">Start Your<br><em>Journey Today.</em></h2>
       <p style="font-size:15px;color:var(--muted);margin-bottom:32px">Fill out the form and our coaches will reach out within 24 hours. Your first session is on us.</p>
-
-      <!-- ═══════════════════════════════════════════════ -->
-      <!-- FORMSPREE FORM — action points to your endpoint -->
-      <!-- ═══════════════════════════════════════════════ -->
-      <form
-        id="freeTrialForm"
-        action="https://formspree.io/f/xzdqjeod"
-        method="POST"
-        novalidate
-        class="contact-form"
-        style="margin-top:0"
-      >
-        <!-- Honeypot anti-spam field (hidden from humans) -->
+      <form id="freeTrialForm" action="https://formspree.io/f/xzdqjeod" method="POST" novalidate class="contact-form" style="margin-top:0">
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-        <!-- Custom subject line for Formspree email -->
         <input type="hidden" name="_subject" value="🏋️ New Free Trial Booking — Kaizen Fitness Studia">
-
         <div class="form-group">
           <label for="ft-name">Full Name</label>
-          <input
-            type="text"
-            id="ft-name"
-            name="name"
-            placeholder="Your name"
-            required
-            autocomplete="name"
-          >
+          <input type="text" id="ft-name" name="name" placeholder="Your name" required autocomplete="name">
           <span class="field-error-msg" id="err-name">Please enter your name.</span>
         </div>
-
         <div class="form-row">
           <div class="form-group">
             <label for="ft-age">Age</label>
-            <input
-              type="number"
-              id="ft-age"
-              name="age"
-              placeholder="Your age"
-              min="13"
-              max="80"
-            >
+            <input type="number" id="ft-age" name="age" placeholder="Your age" min="13" max="80">
           </div>
           <div class="form-group">
             <label for="ft-phone">Phone Number</label>
-            <input
-              type="tel"
-              id="ft-phone"
-              name="phone"
-              placeholder="+91 XXXXX XXXXX"
-              required
-              autocomplete="tel"
-            >
+            <input type="tel" id="ft-phone" name="phone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
             <span class="field-error-msg" id="err-phone">Please enter your phone number.</span>
           </div>
         </div>
-
         <div class="form-group">
           <label for="ft-goal">Fitness Goal</label>
           <select id="ft-goal" name="fitness_goal">
             <option value="">Select your primary goal</option>
-            <option>Fat Loss & Body Recomposition</option>
-            <option>Muscle Building & Strength</option>
+            <option>Fat Loss &amp; Body Recomposition</option>
+            <option>Muscle Building &amp; Strength</option>
             <option>Athletic Performance</option>
-            <option>General Fitness & Health</option>
+            <option>General Fitness &amp; Health</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="ft-message">Your Query (Optional)</label>
-          <textarea
-            id="ft-message"
-            name="message"
-            placeholder="Tell us your query or about your fitness journey..."
-          ></textarea>
+          <textarea id="ft-message" name="message" placeholder="Tell us your query or about your fitness journey..."></textarea>
         </div>
-
-        <!-- Error banner -->
-        <div class="form-error-msg" id="formErrorMsg">
-          Something went wrong. Please try again or WhatsApp us directly.
-        </div>
-
-        <!-- Success message (shown after submit) -->
+        <div class="form-error-msg" id="formErrorMsg">Something went wrong. Please try again or WhatsApp us directly.</div>
         <div class="form-success-msg" id="formSuccessMsg">
           <strong>🎉 YOU'RE BOOKED IN!</strong>
           <p>Your free trial request has been received. A Kaizen coach will call you within 24 hours to confirm your session.</p>
         </div>
-
-        <button
-          type="submit"
-          class="btn-primary btn-submit-main"
-          id="ft-submit"
-          style="width:100%;padding:18px;font-size:13px"
-        >
-          Book Free Trial →
-        </button>
+        <button type="submit" class="btn-primary btn-submit-main" id="ft-submit" style="width:100%;padding:18px;font-size:13px">Book Free Trial →</button>
       </form>
     </div>
   </div>
-
   <div class="contact-right">
     <div class="contact-right-inner">
       <div class="section-eyebrow">Contact</div>
@@ -1294,7 +1124,7 @@ footer{background:var(--black);border-top:1px solid var(--border-green);padding:
 </a>
 
 <script>
-/* ── NAV ── */
+/* NAV */
 function toggleMenu(){
   var h=document.getElementById('hamburger'),m=document.getElementById('mobileMenu');
   h.classList.toggle('active'); m.classList.toggle('open');
@@ -1303,7 +1133,7 @@ function toggleMenu(){
 var nav=document.getElementById('navbar');
 window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);});
 
-/* ── TRAINER MOBILE INFO ── */
+/* TRAINER MOBILE INFO */
 function handleTrainerMobileInfo(){
   var infos=document.querySelectorAll('.trainer-mobile-info');
   var isMobile=window.innerWidth<=900;
@@ -1312,21 +1142,18 @@ function handleTrainerMobileInfo(){
 handleTrainerMobileInfo();
 window.addEventListener('resize',handleTrainerMobileInfo);
 
-/* ── FORMSPREE AJAX SUBMIT ── */
+/* FORMSPREE AJAX SUBMIT */
 (function(){
   var form=document.getElementById('freeTrialForm');
   if(!form)return;
-
   function setField(id,ok){
     var el=document.getElementById(id);
     var errId='err-'+id.replace('ft-','');
     var errEl=document.getElementById(errId);
     if(!el)return;
-    if(ok){el.classList.remove('field-error');}
-    else{el.classList.add('field-error');}
+    if(ok){el.classList.remove('field-error');}else{el.classList.add('field-error');}
     if(errEl){errEl.classList.toggle('show',!ok);}
   }
-
   function validate(){
     var name=document.getElementById('ft-name').value.trim();
     var phone=document.getElementById('ft-phone').value.trim();
@@ -1335,36 +1162,25 @@ window.addEventListener('resize',handleTrainerMobileInfo);
     if(!phone){setField('ft-phone',false);ok=false;}else{setField('ft-phone',true);}
     return ok;
   }
-
   form.addEventListener('submit',function(e){
     e.preventDefault();
     document.getElementById('formErrorMsg').classList.remove('show');
     if(!validate())return;
-
     var btn=document.getElementById('ft-submit');
     var successMsg=document.getElementById('formSuccessMsg');
     var errorMsg=document.getElementById('formErrorMsg');
-
     btn.textContent='Sending...';
     btn.disabled=true;
     btn.style.opacity='0.7';
-
     var data=new FormData(form);
-
-    fetch(form.action,{
-      method:'POST',
-      body:data,
-      headers:{Accept:'application/json'}
-    })
+    fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}})
     .then(function(res){
       if(res.ok){
-        /* SUCCESS */
         form.reset();
         btn.style.display='none';
         successMsg.classList.add('show');
         successMsg.scrollIntoView({behavior:'smooth',block:'nearest'});
       } else {
-        /* SERVER ERROR */
         res.json().then(function(data){
           var msg=data.errors?data.errors.map(function(e){return e.message;}).join(', '):'Submission failed.';
           errorMsg.textContent=msg;
@@ -1376,7 +1192,6 @@ window.addEventListener('resize',handleTrainerMobileInfo);
       }
     })
     .catch(function(){
-      /* NETWORK ERROR */
       errorMsg.textContent='Network error. Please check your connection and try again, or WhatsApp us directly.';
       errorMsg.classList.add('show');
       btn.textContent='Book Free Trial →';
@@ -1386,14 +1201,14 @@ window.addEventListener('resize',handleTrainerMobileInfo);
   });
 })();
 
-/* ── REVEAL ON SCROLL ── */
+/* REVEAL ON SCROLL */
 var reveals=document.querySelectorAll('.reveal');
 var observer=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
 },{threshold:0.1});
 reveals.forEach(function(el){observer.observe(el);});
 
-/* ── LIGHTBOX ── */
+/* LIGHTBOX */
 var galleryImages=[
   {src:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=85',alt:'Main Gym Floor'},
   {src:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=85',alt:'Free Weights Zone'},
@@ -1428,7 +1243,7 @@ document.addEventListener('keydown',function(e){
 var lightboxImg=document.getElementById('lightbox-img');
 if(lightboxImg)lightboxImg.style.transition='opacity 0.18s ease';
 
-/* ── FAQ ── */
+/* FAQ */
 function toggleFaq(questionEl){
   var item=questionEl.closest('.faq-item');
   var isOpen=item.classList.contains('open');
@@ -1436,7 +1251,7 @@ function toggleFaq(questionEl){
   if(!isOpen)item.classList.add('open');
 }
 
-/* ── COUNTER ANIMATION ── */
+/* COUNTER ANIMATION */
 function animateCounter(el,target,duration){
   duration=duration||2000;
   var start=0,step=target/(duration/16);
@@ -1456,7 +1271,9 @@ var statsObserver=new IntersectionObserver(function(entries){
   });
 },{threshold:0.5});
 var statsSection=document.querySelector('.stats');
-if(statsSection)statsObserver.observe(statsSection);/* ── TRANSFORMATION GALLERY TABS ── */
+if(statsSection)statsObserver.observe(statsSection);
+
+/* TRANSFORMATION GALLERY TABS */
 function switchTgTab(btn,tabId){
   document.querySelectorAll('.tg-tab').forEach(function(t){t.classList.remove('active');});
   document.querySelectorAll('.tg-panel').forEach(function(p){p.classList.remove('active');});
