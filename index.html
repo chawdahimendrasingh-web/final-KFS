@@ -536,39 +536,14 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
 }
 .float-btn:hover{transform:scale(1.1)}
 .float-btn:hover .float-tooltip{opacity:1;transform:translateX(0);pointer-events:auto;}
-/* Phone */
-.float-btn--phone{
-  background:linear-gradient(135deg,#1da462,#15803d);
-  box-shadow:0 4px 18px rgba(29,164,98,0.35);
-}
+.float-btn--phone{background:linear-gradient(135deg,#1da462,#15803d);box-shadow:0 4px 18px rgba(29,164,98,0.35);}
 .float-btn--phone:hover{box-shadow:0 8px 24px rgba(29,164,98,0.45);}
-/* Instagram */
-.float-btn--insta{
-  background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);
-  box-shadow:0 4px 18px rgba(220,39,67,0.35);
-}
+.float-btn--insta{background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);box-shadow:0 4px 18px rgba(220,39,67,0.35);}
 .float-btn--insta:hover{box-shadow:0 8px 24px rgba(220,39,67,0.45);}
-/* WhatsApp */
-.float-btn--wa{
-  width:56px;height:56px;
-  background:#25D366;
-  box-shadow:0 6px 20px rgba(37,211,102,0.38);
-}
+.float-btn--wa{width:56px;height:56px;background:#25D366;box-shadow:0 6px 20px rgba(37,211,102,0.38);}
 .float-btn--wa:hover{box-shadow:0 10px 28px rgba(37,211,102,0.45);}
-/* Tooltip */
-.float-tooltip{
-  position:absolute;right:calc(100% + 10px);top:50%;transform:translate(-6px,-50%);
-  background:rgba(8,10,9,0.92);border:1px solid var(--border-green);
-  color:var(--cream);font-size:11px;font-family:'DM Sans',sans-serif;
-  letter-spacing:1.5px;text-transform:uppercase;
-  padding:5px 10px;border-radius:4px;white-space:nowrap;
-  opacity:0;transition:all 0.18s ease;pointer-events:none;
-  backdrop-filter:blur(6px);
-}
-.float-tooltip::after{
-  content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);
-  border:5px solid transparent;border-left-color:rgba(45,96,80,0.38);
-}
+.float-tooltip{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(-6px,-50%);background:rgba(8,10,9,0.92);border:1px solid var(--border-green);color:var(--cream);font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:4px;white-space:nowrap;opacity:0;transition:all 0.18s ease;pointer-events:none;backdrop-filter:blur(6px);}
+.float-tooltip::after{content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:rgba(45,96,80,0.38);}
 
 /* ─── FORM STATES ─── */
 .form-success-msg{display:none;background:rgba(212,175,55,0.07);border:1px solid rgba(212,175,55,0.36);padding:18px 20px;border-radius:var(--r-md);text-align:center;}
@@ -633,21 +608,94 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   .plan-desc{margin-bottom:14px;padding-bottom:14px}.plan-features{gap:8px;margin-bottom:16px}
   .plan .btn-primary,.plan .btn-outline{width:100%;padding:14px}
 
-  /* Founder mobile */
-  .founder-showcase{margin-bottom:24px;border-radius:12px;}
+  /* ── FOUNDER SHOWCASE MOBILE ── */
+  .founder-showcase{
+    margin-bottom:24px;
+    border-radius:12px;
+    background:linear-gradient(180deg,rgba(15,40,32,0.9),rgba(8,10,9,0.97));
+  }
   .founder-showcase::after{display:none}
-  .founder-top-row{grid-template-columns:1fr}
-  .founder-qual-col{border-left:none;border-top:1px solid rgba(212,175,55,0.12);padding:18px 16px;}
-  .founder-portrait{min-height:260px}
-  .founder-stats-strip{grid-template-columns:repeat(2,1fr)}
-  .founder-stat-box{padding:14px 8px}
-  .founder-stat-box strong{font-size:26px}
-  .founder-qual-box{padding:18px;border-radius:14px;margin-bottom:16px;}
-  .founder-qual-header{margin-bottom:14px;padding-bottom:12px;}
-  .founder-qual-name{font-size:22px}
-  .founder-quote{font-size:18px;line-height:1.45;padding:13px 16px;margin-bottom:12px;}
-  .founder-tags{margin-bottom:14px}
-  .founder-actions{display:grid;gap:10px}
+
+  /* Stack single column */
+  .founder-top-row{
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* Hide photo + stats strip entirely on mobile */
+  .founder-portrait-wrap{display:none}
+
+  /* Qual column: full width, no left border */
+  .founder-qual-col{
+    border-left:none;
+    border-top:none;
+    padding:22px 18px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    justify-content:flex-start;
+  }
+
+  /* Eyebrow first */
+  .founder-qual-col .eyebrow{
+    order:-4;
+    margin-bottom:8px;
+    font-size:10px;
+  }
+
+  /* Quote second — large italic pull-quote */
+  .founder-quote{
+    order:-3;
+    font-size:17px;
+    line-height:1.55;
+    padding:14px 16px;
+    margin-bottom:14px;
+    font-style:italic;
+    color:var(--cream);
+    font-family:'Cormorant Garamond',serif;
+    border-left:2px solid var(--gold);
+    background:rgba(255,255,255,0.03);
+    border-radius:0 8px 8px 0;
+  }
+
+  /* Tags third — chip row */
+  .founder-tags{
+    order:-2;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:18px;
+  }
+  .founder-tags span{
+    border:1px solid rgba(212,175,55,0.3);
+    background:rgba(8,10,9,0.65);
+    color:var(--cream-dim);
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    padding:6px 12px;
+    border-radius:3px;
+  }
+
+  /* Hide qual box (certs card) on mobile */
+  .founder-qual-box{display:none}
+
+  /* Buttons fourth — two side by side */
+  .founder-actions{
+    order:-1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:0;
+  }
+  .founder-actions .btn-primary,
+  .founder-actions .btn-outline{
+    text-align:center;
+    padding:13px 8px;
+    font-size:10px;
+    letter-spacing:1.5px;
+    width:100%;
+  }
 
   .trainers-grid{grid-template-columns:1fr;gap:2px;margin-top:20px}
   .trainer-img-wrap{height:300px}.trainer-avatar-initials{font-size:76px}
@@ -702,6 +750,7 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   .nav-logo-text{font-size:16px;letter-spacing:2.5px}.nav-logo-text span{font-size:10px;letter-spacing:1.8px}
   .hero-headline{font-size:34px}.stat-num{font-size:38px}
   .founder-stats-strip{grid-template-columns:1fr}
+  .founder-actions{grid-template-columns:1fr 1fr}
   .trainer-mobile-stats{grid-template-columns:1fr}.review-card{width:88vw}
   .gallery-item img,.gallery-item:nth-child(1) img,.gallery-item:nth-child(6) img{height:120px;min-height:120px !important}
   .gallery-item:nth-child(1) img{height:158px;min-height:158px !important}
@@ -842,10 +891,8 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
       <p class="section-sub" style="margin-top:12px">Certified, experienced, and obsessed with your results.</p>
     </div>
 
-    <!-- FOUNDER SHOWCASE — REBUILT -->
+    <!-- FOUNDER SHOWCASE -->
     <div class="founder-showcase reveal">
-
-      <!-- TOP ROW: portrait + qual card -->
       <div class="founder-top-row">
 
         <!-- LEFT: portrait + stats strip below -->
@@ -853,32 +900,18 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
           <div class="founder-portrait">
             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=85" alt="Founder and Certified Master Trainer at Kaizen Fitness Studia" loading="lazy">
           </div>
-          <!-- Stats strip directly below photo -->
           <div class="founder-stats-strip">
-            <div class="founder-stat-box">
-              <strong>8+</strong>
-              <span>Years of Experience</span>
-            </div>
-            <div class="founder-stat-box">
-              <strong>500+</strong>
-              <span>Members Coached</span>
-            </div>
-            <div class="founder-stat-box">
-              <strong>200+</strong>
-              <span>Transformations</span>
-            </div>
-            <div class="founder-stat-box">
-              <strong>1%</strong>
-              <span>Better Every Day</span>
-            </div>
+            <div class="founder-stat-box"><strong>8+</strong><span>Years of Experience</span></div>
+            <div class="founder-stat-box"><strong>500+</strong><span>Members Coached</span></div>
+            <div class="founder-stat-box"><strong>200+</strong><span>Transformations</span></div>
+            <div class="founder-stat-box"><strong>1%</strong><span>Better Every Day</span></div>
           </div>
         </div>
 
-        <!-- RIGHT: curved qualification card + content -->
+        <!-- RIGHT: qual card + content -->
         <div class="founder-qual-col">
           <div class="eyebrow" style="margin-bottom:10px">Meet the Founder</div>
 
-          <!-- Curved qualification box -->
           <div class="founder-qual-box">
             <div class="founder-qual-header">
               <div class="founder-qual-icon">🏅</div>
@@ -887,38 +920,12 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
                 <div class="founder-qual-role">Founder &amp; Head Coach · Kaizen Fitness Studia</div>
               </div>
             </div>
-            <div class="founder-cert-badge">
-              <span>✓</span> Certified Master Trainer
-            </div>
+            <div class="founder-cert-badge"><span>✓</span> Certified Master Trainer</div>
             <div class="founder-certs-list">
-              <div class="founder-cert-item">
-                <div class="founder-cert-dot">🎓</div>
-                <div class="founder-cert-text">
-                  <strong>Certified Personal Trainer (CPT)</strong>
-                  <em>International Sports Sciences Association · ISSA</em>
-                </div>
-              </div>
-              <div class="founder-cert-item">
-                <div class="founder-cert-dot">💪</div>
-                <div class="founder-cert-text">
-                  <strong>Strength &amp; Conditioning Specialist</strong>
-                  <em>Body Transformation &amp; Hypertrophy Programming</em>
-                </div>
-              </div>
-              <div class="founder-cert-item">
-                <div class="founder-cert-dot">🥗</div>
-                <div class="founder-cert-text">
-                  <strong>Sports Nutrition Certification</strong>
-                  <em>Applied Nutrition for Performance &amp; Fat Loss</em>
-                </div>
-              </div>
-              <div class="founder-cert-item">
-                <div class="founder-cert-dot">⚡</div>
-                <div class="founder-cert-text">
-                  <strong>Functional Movement Specialist</strong>
-                  <em>Mobility, Athletic Performance &amp; Injury Prevention</em>
-                </div>
-              </div>
+              <div class="founder-cert-item"><div class="founder-cert-dot">🎓</div><div class="founder-cert-text"><strong>Certified Personal Trainer (CPT)</strong><em>International Sports Sciences Association · ISSA</em></div></div>
+              <div class="founder-cert-item"><div class="founder-cert-dot">💪</div><div class="founder-cert-text"><strong>Strength &amp; Conditioning Specialist</strong><em>Body Transformation &amp; Hypertrophy Programming</em></div></div>
+              <div class="founder-cert-item"><div class="founder-cert-dot">🥗</div><div class="founder-cert-text"><strong>Sports Nutrition Certification</strong><em>Applied Nutrition for Performance &amp; Fat Loss</em></div></div>
+              <div class="founder-cert-item"><div class="founder-cert-dot">⚡</div><div class="founder-cert-text"><strong>Functional Movement Specialist</strong><em>Mobility, Athletic Performance &amp; Injury Prevention</em></div></div>
             </div>
           </div>
 
@@ -935,10 +942,7 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
           </div>
         </div>
       </div>
-      <!-- /founder-top-row -->
-
     </div>
-    <!-- /founder-showcase -->
 
     <div class="trainers-grid">
       <div class="trainer-card reveal">
@@ -1187,7 +1191,6 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">ST</div><div class="reviewer-info"><h4>Sangam Thakre</h4><span>4 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Clean environment, well-maintained machines aur trainers bhi kaafi supportive hain. Workout ka proper guidance milta hai aur atmosphere motivating rehta hai. Beginners ke liye bhi achha gym hai. Highly recommended."</p></div>
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">AR</div><div class="reviewer-info"><h4>Anjali Rathore</h4><span>3 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"This gym has a great atmosphere and very supportive trainers. The equipment is clean and well-maintained. Highly recommended!"</p></div>
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">AP</div><div class="reviewer-info"><h4>Ankit Singh Parihar</h4><span>3 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"I've had a fantastic experience here, and a big part of that is thanks to my trainer Hitesh. He is extremely knowledgeable and motivating, always tailoring workouts to my fitness level and goals. His guidance has helped me improve not just physically but also in building discipline and confidence. Highly recommend both the gym and Hitesh to anyone serious about their fitness journey!"</p></div>
-        <!-- Duplicates -->
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">HK</div><div class="reviewer-info"><h4>Harsh Kamatkar</h4><span>4 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Equipment and facilities are top notch, but most importantly the trainers are certified &amp; highly skilled. When I came here I had zero knowledge about fitness — I'm grateful to Hitesh Sir for guiding me and helping me transform my body. Highly Recommended! 🏋️"</p></div>
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">SP</div><div class="reviewer-info"><h4>Saurabh Pandit</h4><span>4 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"What I really appreciate is the motivation and discipline maintained throughout sessions. Great environment, positive energy, and excellent results. 100% satisfied and highly recommended!"</p></div>
         <div class="review-card"><div class="review-top"><div class="reviewer-avatar">SS</div><div class="reviewer-info"><h4>Shikha Soni</h4><span>4 months ago · Google</span></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="review-text">"Great, clean, well-equipped gym with very knowledgeable trainers — Hitesh Sir and Shalu Ma'am. They helped me achieve my fitness goal. Super safe, very clean and good crowd. Highly recommend!"</p></div>
@@ -1302,19 +1305,16 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   </div>
 </footer>
 
-<!-- FLOATING BUTTON STACK: Phone + Instagram + WhatsApp -->
+<!-- FLOATING BUTTON STACK -->
 <div class="float-stack">
-  <!-- Phone -->
   <a href="tel:+917415927208" class="float-btn float-btn--phone" title="Call Us">
     <span class="float-tooltip">Call Us</span>
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
   </a>
-  <!-- Instagram -->
   <a href="https://instagram.com/kaizenfitnessstudia" target="_blank" rel="noopener" class="float-btn float-btn--insta" title="Instagram">
     <span class="float-tooltip">Instagram</span>
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
   </a>
-  <!-- WhatsApp -->
   <a href="https://wa.me/917415927208" class="float-btn float-btn--wa" title="Chat on WhatsApp" target="_blank" rel="noopener">
     <span class="float-tooltip">WhatsApp</span>
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
