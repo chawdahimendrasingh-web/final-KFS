@@ -628,9 +628,11 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   .hero-buttons{flex-direction:column;align-items:stretch;gap:10px;padding:0 2px}
   .btn-primary,.btn-outline{width:100%;padding:14px 16px;font-size:10px;letter-spacing:1.5px}
   .hero-scroll{display:none}
-  .stats{grid-template-columns:1fr;padding:6px 18px;gap:0}
-  .stat{padding:18px 16px;border-bottom:1px solid var(--border-green)}.stat:last-child{border-bottom:none}
-  .stat:not(:last-child)::after{display:none}.stat-num{font-size:44px}
+  .stats{grid-template-columns:repeat(2,1fr);padding:6px 18px;gap:0}
+  .stat{padding:18px 16px;border-bottom:1px solid var(--border-green);position:relative}
+  .stat:nth-child(2)::after{display:none}
+  .stat:nth-child(3){grid-column:1/-1;border-bottom:none}
+  .stat-num{font-size:44px}
   .pillars{grid-template-columns:1fr;border-radius:var(--r-sm)}.pillar{padding:22px 18px}
   .pillar-num{font-size:52px;margin-bottom:-14px}.pillar h3{font-size:24px;margin-bottom:8px}
   .services-grid{grid-template-columns:1fr;border-radius:var(--r-sm)}.service-card{padding:22px 18px}
@@ -706,14 +708,13 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   
   .float-stack{bottom:18px;right:14px}
   .float-btn{width:44px;height:44px}.float-btn--wa{width:50px;height:50px}
-  .float-btn--join{height:54px;padding:0 20px;font-size:13px;}
+  .float-btn--join{height:54px;padding:0 36px;min-width:160px;font-size:13px;}
   .float-tooltip{display:none}
 }
 @media(max-width:420px){
   nav{padding:12px 14px}.logo-hex{width:32px;height:32px}
   .nav-logo-text{font-size:16px;letter-spacing:2.5px}.nav-logo-text span{font-size:10px;letter-spacing:1.8px}
   .hero-headline{font-size:34px}.stat-num{font-size:38px}
-  .founder-stats-strip{grid-template-columns:1fr}
   .trainer-mobile-stats{grid-template-columns:1fr}.review-card{width:88vw}
   .gallery-item img,.gallery-item:nth-child(1) img,.gallery-item:nth-child(6) img{height:120px;min-height:120px !important}
   .gallery-item:nth-child(1) img{height:158px;min-height:158px !important}
@@ -1373,7 +1374,7 @@ function switchTgTab(btn,tabId){document.querySelectorAll('.tg-tab').forEach(fun
   viewport.addEventListener('touchend',function(){scheduleResume();});
   viewport.addEventListener('scroll',function(){if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;else if(viewport.scrollLeft<0)viewport.scrollLeft+=halfWidth;});
   prevBtn&&prevBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft-=CARD_W;if(viewport.scrollLeft<0)viewport.scrollLeft+=halfWidth;scheduleResume();});
-  nextBtn&&nextBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft+=CARD_W;if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;scheduleResume();});
+  nextBtn&&nextBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft+=CARD_W;if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;scheduleResume();});	
   viewport.addEventListener('mouseenter',function(){if(autoRunning){setAuto(false);clearTimeout(idleTimer);}});
   viewport.addEventListener('mouseleave',function(){if(!isDown)setAuto(true);});
   viewport.addEventListener('click',function(e){if(isDragging){e.stopPropagation();e.preventDefault();isDragging=false;}},true);
