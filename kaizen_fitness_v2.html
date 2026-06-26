@@ -22,19 +22,26 @@
 <meta name="twitter:title" content="Kaizen Fitness Studia | Bhopal">
 <meta name="twitter:description" content="500+ transformations. Expert coaches. Premium gym in Awadhpuri, BHEL, Bhopal.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
-<!-- DNS prefetch for external resources -->
+<!-- DNS prefetch (fonts only — Unsplash covered by preconnect below) -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link rel="dns-prefetch" href="//images.unsplash.com">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <!-- Preconnect for fonts to reduce latency -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Non-render-blocking async font load via print media trick -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
-<!-- Hero preload: responsive srcset for LCP -->
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80 800w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80 1200w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="style" crossorigin href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<!-- LCP hero preload — AVIF for Chrome/Lighthouse (type attr keeps WebP browsers from double-downloading) -->
+<link rel="preload" as="image" type="image/avif"
+  href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=avif"
+  imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=828&q=75&fm=avif 828w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=75&fm=avif 1200w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=avif 1920w"
+  imagesizes="100vw" fetchpriority="high">
+<!-- WebP preload for browsers that support WebP but not AVIF (Safari 16 pre-AVIF, etc.) -->
+<link rel="preload" as="image" type="image/webp"
+  href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=webp"
+  imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=828&q=75&fm=webp 828w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=75&fm=webp 1200w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=webp 1920w"
+  imagesizes="100vw" fetchpriority="high">
 <style>
 /* ─── TOKENS ─── */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -112,6 +119,7 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 /* Hero bg: real img element for LCP */
 .hero-bg{position:absolute;inset:0;overflow:hidden}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,23,24,.64) 0%,rgba(5,90,91,.46) 40%,rgba(14,23,24,.64) 100%);z-index:1;pointer-events:none}
+.hero-bg picture{display:contents}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;display:block}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.035) 1px,transparent 1px);background-size:80px 80px;animation:gridPulse 10s ease-in-out infinite;will-change:opacity}
 @keyframes gridPulse{0%,100%{opacity:.3}50%{opacity:.8}}
@@ -124,7 +132,7 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 .hero-sub{font-size:var(--fs-base);color:var(--cream-dim);margin-bottom:52px;letter-spacing:.2px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.75}
 .hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase}
-.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2.2s ease-in-out infinite;will-change:opacity,transform}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2.2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{opacity:.25;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
 
 /* ─── BUTTONS ─── */
@@ -255,7 +263,7 @@ section{position:relative}
 
 /* ─── TRAINERS GRID ─── */
 .trainers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px}
-.trainer-card{position:relative;overflow:hidden;cursor:default;background:var(--charcoal);border-radius:var(--r-md);contain:layout}
+.trainer-card{position:relative;overflow:hidden;cursor:default;background:var(--charcoal);border-radius:var(--r-md);contain:layout style}
 .trainer-card:hover .trainer-img-wrap{transform:scale(1.03)}
 .trainer-card:hover .trainer-overlay{opacity:1}
 .trainer-card:hover .trainer-stats{transform:translateY(0);opacity:1}
@@ -358,7 +366,7 @@ section{position:relative}
 .faq-item.open .faq-answer{max-height:280px}
 
 /* ─── CONTACT ─── */
-.contact{background:linear-gradient(135deg,rgba(5,90,91,.78),rgba(14,23,24,.84));display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--bg-gold)}
+.contact{background:linear-gradient(135deg,rgba(5,90,91,.78),rgba(14,23,24,.84));display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--bg-gold);content-visibility:auto;contain-intrinsic-size:0 700px}
 .contact-left{padding:var(--sp-xl) 48px;background:linear-gradient(135deg,rgba(5,90,91,.72),rgba(5,130,131,.48));display:flex;flex-direction:column;justify-content:center;position:relative}
 .contact-left::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 22% 20%,rgba(212,175,55,.07),transparent 28%)}
 .contact-left-inner{max-width:580px;margin-left:auto;position:relative;z-index:1}
@@ -653,6 +661,12 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   *{animation-duration:.01ms!important;transition-duration:.01ms!important}
   .reveal{transition:none}
 }
+/* ─── MOBILE ANIMATION BUDGET ─── */
+/* Freeze decorative looping animations on narrow viewports to cut GPU compositor layers */
+@media(max-width:900px){
+  .hero-grid{animation:none;will-change:auto;opacity:.5}
+  .reviews-auto-indicator .dot{animation:none;will-change:auto}
+}
 </style>
 </head>
 <body>
@@ -689,17 +703,22 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img class="hero-bg-img"
-      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80"
-      srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80 800w,
-              https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80 1200w,
-              https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80 1600w"
-      sizes="100vw"
-      alt="Kaizen Fitness Studia gym floor — Bhopal's premier transformation center"
-      fetchpriority="high"
-      loading="eager"
-      decoding="sync"
-      width="1600" height="900">
+    <picture>
+      <source type="image/avif"
+        srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=828&q=75&fm=avif 828w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=75&fm=avif 1200w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=avif 1920w"
+        sizes="100vw">
+      <source type="image/webp"
+        srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=828&q=75&fm=webp 828w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=75&fm=webp 1200w,https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=75&fm=webp 1920w"
+        sizes="100vw">
+      <img class="hero-bg-img"
+        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80"
+        sizes="100vw"
+        alt="Kaizen Fitness Studia gym floor — Bhopal's premier transformation center"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        width="1920" height="1080">
+    </picture>
   </div>
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
@@ -800,7 +819,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <div class="founder-top-row">
         <div class="founder-portrait-wrap">
           <div class="founder-portrait">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=85" alt="Founder and Certified Master Trainer at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=75&fm=webp 600w,https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=80&fm=webp 900w" sizes="(max-width:900px) 100vw, 45vw" alt="Founder and Certified Master Trainer at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600">
           </div>
           <div class="founder-stats-strip">
             <div class="founder-stat-box"><strong>8+</strong><span>Years of Experience</span></div>
@@ -918,12 +937,12 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <p class="section-sub" style="margin-top:12px">World-class equipment, premium environment, zero compromises.</p>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="View: Main Gym Floor"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80" alt="Main Gym Floor at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600"><div class="gallery-item-overlay"><span class="gallery-item-label">Main Gym Floor</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="View: Free Weights Zone"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Free Weights Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Free Weights Zone</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="View: Cardio Zone"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Cardio Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Cardio Zone</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="View: 1-on-1 Coaching"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="1-on-1 Coaching session" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">1-on-1 Coaching</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="View: Strength Training"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="Strength Training area" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Strength Training</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(5)" role="button" tabindex="0" aria-label="View: Community"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Community and Culture at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="900" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Community &amp; Culture</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="View: Main Gym Floor"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=75&fm=webp" alt="Main Gym Floor at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600"><div class="gallery-item-overlay"><span class="gallery-item-label">Main Gym Floor</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="View: Free Weights Zone"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=75&fm=webp" alt="Free Weights Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Free Weights Zone</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="View: Cardio Zone"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=75&fm=webp" alt="Cardio Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Cardio Zone</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="View: 1-on-1 Coaching"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=75&fm=webp" alt="1-on-1 Coaching session" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">1-on-1 Coaching</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="View: Strength Training"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=75&fm=webp" alt="Strength Training area" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Strength Training</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(5)" role="button" tabindex="0" aria-label="View: Community"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=75&fm=webp" alt="Community and Culture at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="900" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Community &amp; Culture</span></div></div>
     </div>
   </div>
 </section>
@@ -950,9 +969,9 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <div class="tg-stat-box"><span class="tg-stat-num">96%</span><span class="tg-stat-label">Member Satisfaction</span></div>
     </div>
     <div class="tg-grid-3 reveal" style="display:grid">
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Rohan K. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Rohan K. after losing 12kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Priya S. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Priya S. after losing 15kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Amit J. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="Amit J. after gaining 8kg muscle at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=75&fm=webp" alt="Rohan K. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=75&fm=webp" alt="Rohan K. after losing 12kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=75&fm=webp" alt="Priya S. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=75&fm=webp" alt="Priya S. after losing 15kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=75&fm=webp" alt="Amit J. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=75&fm=webp" alt="Amit J. after gaining 8kg muscle at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
     </div>
     <div class="tg-cta-row reveal"><p>Ready to write your own transformation story?</p><button class="btn-primary" onclick="scrollTo('contact')">Start Your Free Trial Today</button></div>
   </div>
@@ -1156,18 +1175,27 @@ var lightboxImg=document.getElementById('lightbox-img');
 var faqList=document.getElementById('faqList');
 
 /* ── UTILITY ── */
+var _nativeScrollTo=window.scrollTo.bind(window);
 function scrollTo(id){
   var el=document.getElementById(id);
   if(el)el.scrollIntoView({behavior:'smooth'});
   closeMobileMenu();
 }
-window.scrollTo=scrollTo; // expose for inline handlers
+window.scrollTo=function(idOrX,y){
+  if(typeof idOrX==='string')scrollTo(idOrX);
+  else _nativeScrollTo(idOrX,y);
+}; // expose for inline handlers; numeric calls fall through
 
 /* ── NAV ── */
-var navScrolled=false;
+var navScrolled=false,navRafPending=false;
 window.addEventListener('scroll',function(){
-  var s=window.scrollY>50;
-  if(s!==navScrolled){navScrolled=s;navbar.classList.toggle('scrolled',s);}
+  if(navRafPending)return;
+  navRafPending=true;
+  requestAnimationFrame(function(){
+    navRafPending=false;
+    var s=window.scrollY>50;
+    if(s!==navScrolled){navScrolled=s;navbar.classList.toggle('scrolled',s);}
+  });
 },{passive:true});
 
 function toggleMenu(){
@@ -1358,6 +1386,13 @@ faqList.addEventListener('keydown',function(e){
     rafId=requestAnimationFrame(loop);
   }
   rafId=requestAnimationFrame(loop);
+
+  /* ── Pause RAF when carousel scrolls off-screen ── */
+  (new IntersectionObserver(function(entries){
+    var vis=entries[0].isIntersecting;
+    if(vis&&!rafId){lastTs=null;rafId=requestAnimationFrame(loop);}
+    else if(!vis&&rafId){cancelAnimationFrame(rafId);rafId=null;}
+  },{rootMargin:'200px 0px 200px 0px'})).observe(document.getElementById('reviews')||vp);
 
   /* Mouse drag */
   vp.addEventListener('mousedown',function(e){isDown=true;isDragging=false;var vpLeft=vp.getBoundingClientRect().left;startX=e.pageX-vpLeft;startScroll=vp.scrollLeft;vp.classList.add('dragging');setAuto(false);vp._vpLeft=vpLeft;e.preventDefault();});
