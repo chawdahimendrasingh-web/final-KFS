@@ -4,18 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Kaizen Fitness Studia | Bhopal's Premier Transformation Center</title>
-<meta name="description" content="Achieve your fitness goals at Kaizen Fitness Studia in Bhopal. Expert coaching, customized nutrition plans, and a premium workout environment.">
+<meta name="description" content="Achieve your fitness goals at Kaizen Fitness Studia in Bhopal. Expert coaching, customized nutrition plans, and a premium workout environment in Awadhpuri, BHEL.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0E1718">
+<link rel="canonical" href="https://kaizenfitnessstudia.in/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kaizen Fitness Studia | Bhopal's Premier Transformation Center">
+<meta property="og:description" content="500+ transformations. Expert coaches. Premium facility in Awadhpuri, BHEL, Bhopal. Book your free trial today.">
+<meta property="og:url" content="https://kaizenfitnessstudia.in/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kaizen Fitness Studia | Bhopal">
+<meta name="twitter:description" content="500+ transformations. Expert coaches. Premium gym in Awadhpuri, BHEL, Bhopal.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
 <!-- DNS prefetch for external resources -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="dns-prefetch" href="//images.unsplash.com">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <!-- Preconnect for fonts to reduce latency -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Non-render-blocking font load: display=swap prevents FOIT -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<!-- Preload hero image (LCP element) -->
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" fetchpriority="high">
+<!-- Non-render-blocking async font load via print media trick -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+<!-- Hero preload: responsive srcset for LCP -->
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80 800w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80 1200w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80 1600w" imagesizes="100vw" fetchpriority="high">
 <style>
 /* ─── TOKENS ─── */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -37,8 +56,9 @@ body{
   background:radial-gradient(circle at 18% 12%,rgba(212,175,55,.06),transparent 24%),
     radial-gradient(circle at 84% 36%,rgba(5,122,123,.14),transparent 30%),
     linear-gradient(135deg,#0A1314 0%,#0F2222 42%,#0E1718 100%);
-  color:var(--text);font-family:'DM Sans',sans-serif;
+  color:var(--text);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   overflow-x:hidden;line-height:1.7;min-width:320px;font-size:var(--fs-base);
+  text-rendering:optimizeSpeed;-webkit-font-smoothing:antialiased;
 }
 img,svg,video,iframe{max-width:100%}
 /* Grid overlay — absolute on mobile, fixed on desktop (cheaper on mobile) */
@@ -49,7 +69,7 @@ body::before{
   mask-image:linear-gradient(to bottom,rgba(0,0,0,.12),rgba(0,0,0,.65) 18%,rgba(0,0,0,.55) 82%,rgba(0,0,0,.12));
 }
 body::after{
-  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:radial-gradient(circle at 12% 58%,rgba(5,90,91,.14),transparent 24%),
     radial-gradient(circle at 88% 76%,rgba(212,175,55,.045),transparent 22%),
     linear-gradient(90deg,rgba(14,23,24,.40),transparent 24%,transparent 76%,rgba(14,23,24,.64));
@@ -68,12 +88,12 @@ h2 em{color:var(--gold);font-style:italic}
 .section-header{margin-bottom:var(--sp-lg)}
 
 /* ─── NAV ─── */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(14,23,24,.84),transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:padding var(--ts),background var(--ts),border-color var(--ts),box-shadow var(--ts)}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(14,23,24,.84),transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:padding var(--ts),background var(--ts),border-color var(--ts),box-shadow var(--ts);contain:layout}
 nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-green);padding:12px 48px;box-shadow:0 4px 24px rgba(0,0,0,.4)}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-hex{width:38px;height:38px;flex-shrink:0;contain:strict}
-.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:4px;color:var(--cream)}
-.nav-logo-text span{color:var(--gold);font-size:11px;display:block;font-family:'DM Sans',sans-serif;letter-spacing:3px;margin-top:-3px}
+.logo-hex{width:48px;height:48px;flex-shrink:0;contain:strict;display:flex}
+.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:3px;color:var(--cream)}
+.nav-logo-text span{color:var(--gold);font-size:9px;display:block;font-family:'DM Sans',sans-serif;letter-spacing:2.5px;margin-top:-2px}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;transition:color var(--tf);padding-bottom:2px;border-bottom:1px solid transparent}
 .nav-links a:hover,.nav-links a.active{color:var(--cream);border-bottom-color:rgba(212,175,55,.4)}
@@ -89,13 +109,15 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 
 /* ─── HERO ─── */
 .hero{min-height:100vh;padding-top:80px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;contain:layout}
-/* Hero bg: will-change promotes to GPU layer for smooth rendering */
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,23,24,.64) 0%,rgba(5,90,91,.46) 40%,rgba(14,23,24,.64) 100%),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80') center/cover no-repeat;will-change:transform}
+/* Hero bg: real img element for LCP */
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,23,24,.64) 0%,rgba(5,90,91,.46) 40%,rgba(14,23,24,.64) 100%);z-index:1;pointer-events:none}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;display:block}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.035) 1px,transparent 1px);background-size:80px 80px;animation:gridPulse 10s ease-in-out infinite;will-change:opacity}
 @keyframes gridPulse{0%,100%{opacity:.3}50%{opacity:.8}}
 .hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,175,55,.07) 0%,transparent 70%);pointer-events:none}
 .hero-content{position:relative;text-align:center;max-width:860px;padding:var(--sp-xl) 24px;z-index:2}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.5);padding:7px 18px;margin-bottom:28px;font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:rgba(14,23,24,.34);backdrop-filter:blur(6px);border-radius:var(--r-sm)}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.5);padding:7px 18px;margin-bottom:28px;font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:rgba(14,23,24,.72);border-radius:var(--r-sm)}
 .hero-badge::before,.hero-badge::after{content:'';width:18px;height:1px;background:rgba(212,175,55,.6)}
 .hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8vw,96px);font-weight:300;line-height:1.08;color:var(--text);margin-bottom:16px}
 .hero-headline em{font-style:italic;color:var(--gold)}
@@ -131,7 +153,7 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 section{position:relative}
 
 /* ─── WHY KAIZEN ─── */
-.why{background:linear-gradient(180deg,rgba(16,32,34,.32),rgba(14,23,24,.06));border-bottom:1px solid var(--bg-green)}
+.why{background:linear-gradient(180deg,rgba(16,32,34,.32),rgba(14,23,24,.06));border-bottom:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 600px}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-green);border:1px solid var(--bg-green);border-radius:var(--r-md);overflow:hidden}
 .pillar{background:#152426;padding:28px;position:relative;overflow:hidden;border:1px solid transparent;transition:background var(--ts),border-color var(--tf)}
 .pillar::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,.05),transparent);opacity:0;transition:opacity var(--ts)}
@@ -151,7 +173,7 @@ section{position:relative}
 .cta-inner p{font-size:var(--fs-base);color:var(--muted);margin-bottom:24px;line-height:1.7}
 
 /* ─── SERVICES ─── */
-.services{background:linear-gradient(180deg,rgba(22,40,40,.82),rgba(27,48,50,.78));border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-green)}
+.services{background:linear-gradient(180deg,rgba(22,40,40,.82),rgba(27,48,50,.78));border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 700px}
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bg-green);border:1px solid var(--bg-green);border-radius:var(--r-md);overflow:hidden}
 .service-card{background:#132527;padding:28px 32px;position:relative;overflow:hidden;cursor:default;border:1px solid transparent;transition:background var(--ts),border-color var(--tf)}
 .service-card::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--ts)}
@@ -168,7 +190,7 @@ section{position:relative}
 .service-card:hover .service-icon{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3)}
 
 /* ─── MEMBERSHIP ─── */
-.membership{background:linear-gradient(180deg,rgba(14,23,24,.80),rgba(15,30,32,.76))}
+.membership{background:linear-gradient(180deg,rgba(14,23,24,.80),rgba(15,30,32,.76));content-visibility:auto;contain-intrinsic-size:0 600px}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-green);border:1px solid var(--bg-green);border-radius:var(--r-md);overflow:visible}
 .plan{background:#152426;padding:28px;position:relative;border:1px solid transparent;transition:background var(--ts),border-color var(--tf);border-radius:0}
 .plan:hover{background:var(--surface);border-color:var(--bg-gold-h)}
@@ -188,7 +210,7 @@ section{position:relative}
 .plan-features li.active::before{content:'✓';background:rgba(212,175,55,.14);color:var(--gold)}
 
 /* ─── TRAINERS ─── */
-.trainers{background:linear-gradient(180deg,rgba(14,23,24,.84),rgba(27,48,50,.78));border-top:1px solid var(--bg-green)}
+.trainers{background:linear-gradient(180deg,rgba(14,23,24,.84),rgba(27,48,50,.78));border-top:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 900px}
 
 /* ─── FOUNDER ─── */
 .founder-showcase{position:relative;margin:0 0 40px;background:linear-gradient(135deg,rgba(5,90,91,.66) 0%,rgba(22,40,40,.78) 50%,rgba(14,23,24,.88) 100%);border:1px solid rgba(212,175,55,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,.38)}
@@ -196,8 +218,8 @@ section{position:relative}
 .founder-top-row{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);position:relative;z-index:1}
 .founder-portrait-wrap{position:relative;display:flex;flex-direction:column}
 .founder-portrait{position:relative;min-height:clamp(360px,42vw,560px);background:var(--forest-deep);overflow:hidden}
-.founder-portrait::before{content:'';position:absolute;inset:12% 8% 4%;background:rgba(212,175,55,.16);filter:blur(52px);z-index:0}
-.founder-portrait img{position:relative;z-index:1;width:100%;height:100%;min-height:inherit;display:block;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.founder-portrait::before{content:'';position:absolute;inset:0;box-shadow:inset 0 0 80px 20px rgba(212,175,55,.12);z-index:0;pointer-events:none}
+.founder-portrait img{position:relative;z-index:1;width:100%;height:100%;min-height:inherit;display:block;object-fit:cover}
 .founder-portrait::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,transparent 40%,rgba(14,23,24,.52) 100%),linear-gradient(135deg,rgba(212,175,55,.1),transparent 34%);pointer-events:none}
 .founder-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(212,175,55,.2);background:rgba(14,22,22,.92)}
 .founder-stat-box{padding:16px 10px;text-align:center;position:relative;transition:background var(--tf)}
@@ -206,7 +228,7 @@ section{position:relative}
 .founder-stat-box strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1;color:var(--gold);font-weight:400}
 .founder-stat-box span{display:block;margin-top:5px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);line-height:1.35}
 .founder-qual-col{position:relative;border-left:1px solid var(--bg-gold);display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,3.5vw,44px);z-index:1}
-.founder-qual-box{background:linear-gradient(145deg,rgba(3,62,63,.7) 0%,rgba(212,175,55,.04) 60%,rgba(14,23,24,.46) 100%);border:1px solid rgba(212,175,55,.22);border-radius:18px;padding:24px;margin-bottom:20px;position:relative;overflow:hidden;backdrop-filter:blur(4px);box-shadow:0 8px 32px rgba(0,0,0,.2),inset 0 1px 0 rgba(212,175,55,.1)}
+.founder-qual-box{background:linear-gradient(145deg,rgba(3,62,63,.88) 0%,rgba(212,175,55,.06) 60%,rgba(14,23,24,.76) 100%);border:1px solid rgba(212,175,55,.22);border-radius:18px;padding:24px;margin-bottom:20px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.2),inset 0 1px 0 rgba(212,175,55,.1)}
 .founder-qual-box::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(212,175,55,.08),transparent 70%);pointer-events:none}
 .founder-qual-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(212,175,55,.14)}
 .founder-qual-icon{width:48px;height:48px;flex-shrink:0;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.28);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
@@ -238,14 +260,14 @@ section{position:relative}
 .trainer-card:hover .trainer-overlay{opacity:1}
 .trainer-card:hover .trainer-stats{transform:translateY(0);opacity:1}
 .trainer-card:hover .trainer-front-bottom{transform:translateY(8px);opacity:0}
-.trainer-img-wrap{height:420px;overflow:hidden;position:relative;transition:transform .5s cubic-bezier(.25,.46,.45,.94);background:var(--forest-deep);display:flex;align-items:center;justify-content:center;will-change:transform}
+.trainer-img-wrap{height:420px;overflow:hidden;position:relative;transition:transform .5s cubic-bezier(.25,.46,.45,.94);background:var(--forest-deep);display:flex;align-items:center;justify-content:center}
 .trainer-avatar{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative}
 .trainer-avatar-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--forest-deep) 0%,var(--charcoal) 50%,var(--black) 100%)}
 .trainer-avatar-initials{font-family:'Bebas Neue',sans-serif;font-size:110px;color:rgba(212,175,55,.05);letter-spacing:4px;position:relative;z-index:1;line-height:1}
 .trainer-avatar-icon{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);width:72px;height:72px;background:rgba(14,23,24,.64);border:1px solid rgba(212,175,55,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:2}
 .trainer-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,transparent,var(--gold),transparent);z-index:10;opacity:0;transition:opacity var(--ts)}
 .trainer-card:hover::before{opacity:1}
-.trainer-badge{position:absolute;top:16px;right:16px;z-index:10;background:rgba(14,23,24,.72);border:1px solid rgba(212,175,55,.28);padding:5px 12px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);backdrop-filter:blur(4px);border-radius:var(--r-sm)}
+.trainer-badge{position:absolute;top:16px;right:16px;z-index:10;background:rgba(14,23,24,.86);border:1px solid rgba(212,175,55,.28);padding:5px 12px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border-radius:var(--r-sm)}
 .trainer-front-bottom{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(14,23,24,.90) 56%,transparent);z-index:5;transition:transform var(--ts),opacity var(--ts)}
 .trainer-front-name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;color:var(--text);margin-bottom:4px}
 .trainer-front-role{font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
@@ -262,7 +284,7 @@ section{position:relative}
 .trainer-mobile-info{display:none}
 
 /* ─── REVIEWS ─── */
-.reviews{background:linear-gradient(180deg,rgba(22,40,40,.84),rgba(14,23,24,.78));padding:var(--sp-xl) 0;overflow:hidden;border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-gold)}
+.reviews{background:linear-gradient(180deg,rgba(22,40,40,.84),rgba(14,23,24,.78));padding:var(--sp-xl) 0;overflow:hidden;border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-gold);content-visibility:auto;contain-intrinsic-size:0 600px}
 .reviews-inner{max-width:1400px;margin:0 auto;padding:0 48px}
 .reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:var(--sp-lg);flex-wrap:wrap;gap:20px}
 .reviews-overall{display:flex;align-items:center;gap:20px;background:var(--forest-deep);border:1px solid var(--bg-green);padding:20px 28px;border-radius:var(--r-md)}
@@ -295,13 +317,13 @@ section{position:relative}
 .review-text{font-size:var(--fs-sm);color:var(--cream-dim);line-height:1.75;font-style:italic}
 
 /* ─── GALLERY ─── */
-.gallery{background:linear-gradient(180deg,rgba(14,23,24,.76),rgba(5,90,91,.42),rgba(14,23,24,.82));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--bg-green)}
+.gallery{background:linear-gradient(180deg,rgba(14,23,24,.76),rgba(5,90,91,.42),rgba(14,23,24,.82));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 700px}
 .gallery-inner{max-width:1400px;margin:0 auto}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:3px;margin-top:32px;border-radius:var(--r-md);overflow:hidden}
 .gallery-item{position:relative;overflow:hidden;cursor:pointer;background:var(--charcoal);contain:layout}
 .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
 .gallery-item:nth-child(6){grid-column:span 2}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;min-height:200px;transition:transform .55s cubic-bezier(.25,.46,.45,.94);will-change:transform}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;min-height:200px;transition:transform .55s cubic-bezier(.25,.46,.45,.94)}
 .gallery-item:nth-child(1) img{min-height:420px}
 .gallery-item:hover img{transform:scale(1.05)}
 .gallery-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,23,24,.64) 0%,transparent 52%);opacity:0;transition:opacity var(--ts);display:flex;align-items:flex-end;padding:18px}
@@ -309,8 +331,8 @@ section{position:relative}
 .gallery-item-label{font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
 
 /* ─── LIGHTBOX ─── */
-.lightbox{display:none;position:fixed;inset:0;z-index:9000;background:rgba(14,23,24,.84);align-items:center;justify-content:center;backdrop-filter:blur(10px)}
-.lightbox.open{display:flex}
+.lightbox{display:none;position:fixed;inset:0;z-index:9000;background:rgba(14,23,24,.92);align-items:center;justify-content:center;contain:layout}
+.lightbox.open{display:flex;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border:1px solid var(--bg-green);border-radius:var(--r-sm);transition:opacity .16s ease}
 .lightbox-close{position:absolute;top:24px;right:32px;font-size:28px;color:var(--muted);cursor:pointer;transition:color var(--tf);line-height:1;background:none;border:none;font-family:sans-serif}
 .lightbox-close:hover{color:var(--gold)}
@@ -319,7 +341,7 @@ section{position:relative}
 .lightbox-prev{left:20px}.lightbox-next{right:20px}
 
 /* ─── FAQ ─── */
-.faq{background:linear-gradient(180deg,rgba(22,40,40,.80),rgba(14,23,24,.84));border-top:1px solid var(--bg-green)}
+.faq{background:linear-gradient(180deg,rgba(22,40,40,.80),rgba(14,23,24,.84));border-top:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 900px}
 .faq-inner{max-width:880px;margin:0 auto}
 .faq-list{margin-top:32px;display:flex;flex-direction:column;gap:2px}
 .faq-item{background:#152426;border:1px solid var(--bg-green);transition:border-color var(--tf);border-radius:var(--r-sm);overflow:hidden}
@@ -361,14 +383,14 @@ section{position:relative}
 .map-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:10px 14px;background:var(--black);border-top:1px solid var(--bg-green);display:flex;align-items:center;gap:7px}
 
 /* ─── TRANSFORMATION GALLERY ─── */
-.transform-gallery{background:linear-gradient(180deg,rgba(22,40,40,.86),rgba(14,23,24,.76));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-green)}
+.transform-gallery{background:linear-gradient(180deg,rgba(22,40,40,.86),rgba(14,23,24,.76));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-green);content-visibility:auto;contain-intrinsic-size:0 800px}
 .transform-gallery-inner{max-width:1400px;margin:0 auto}
 .tg-grid-3{grid-template-columns:repeat(3,1fr);gap:2px}
 .tg-ba-card{position:relative;background:var(--black);border:1px solid var(--bg-green);overflow:hidden;transition:border-color var(--tf);border-radius:var(--r-sm)}
 .tg-ba-card:hover{border-color:rgba(212,175,55,.4)}
 .tg-ba-split{display:grid;grid-template-columns:1fr 1fr;height:320px}
 .tg-ba-side{position:relative;overflow:hidden}
-.tg-ba-side img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;will-change:transform}
+.tg-ba-side img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .tg-ba-card:hover .tg-ba-side img{transform:scale(1.03)}
 .tg-ba-label{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:700;padding:4px 8px;z-index:2;border-radius:var(--r-sm)}
 .tg-ba-label.before{background:rgba(14,23,24,.72);color:var(--muted);border:1px solid var(--bg-green)}
@@ -420,7 +442,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 .float-btn--wa:hover{box-shadow:0 10px 28px rgba(37,211,102,.45)}
 .float-btn--join{width:auto;height:64px;padding:0 28px;border-radius:32px;background:linear-gradient(135deg,var(--gold) 0%,#b8962e 100%);color:var(--black);font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;box-shadow:0 8px 24px rgba(212,175,55,.4);margin-top:4px}
 .float-btn--join:hover{box-shadow:0 12px 32px rgba(212,175,55,.6);color:var(--black);transform:scale(1.05)}
-.float-tooltip{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(-6px,-50%);background:rgba(14,23,24,.76);border:1px solid var(--bg-green);color:var(--cream);font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .18s ease,transform .18s ease;pointer-events:none;backdrop-filter:blur(6px)}
+.float-tooltip{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(-6px,-50%);background:rgba(14,23,24,.95);border:1px solid var(--bg-green);color:var(--cream);font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .18s ease,transform .18s ease;pointer-events:none}
 .float-tooltip::after{content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:rgba(5,122,123,.38)}
 
 /* ─── FORM STATES ─── */
@@ -469,7 +491,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   .section-sub{font-size:var(--fs-sm)}
   .eyebrow{font-size:10px;letter-spacing:3px;margin-bottom:10px}
   .hero{min-height:100svh;padding-top:80px;padding-bottom:40px}
-  .hero-bg{background-position:center top}
+  .hero-bg-img{object-position:center top}
   .hero-grid{background-size:56px 56px}
   .hero-glow{width:380px;height:380px}
   .hero-content{padding:20px 16px}
@@ -600,9 +622,9 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 /* ─── RESPONSIVE 420px ─── */
 @media(max-width:420px){
   nav{padding:12px 14px}
-  .logo-hex{width:30px;height:30px}
-  .nav-logo-text{font-size:15px;letter-spacing:2px}
-  .nav-logo-text span{font-size:9px;letter-spacing:1.5px}
+  .logo-hex{width:38px;height:38px}
+  .nav-logo-text{font-size:13px;letter-spacing:2px}
+  .nav-logo-text span{font-size:8px;letter-spacing:1.5px}
   .hero-headline{font-size:32px;line-height:1.1}
   .hero-sub{font-size:13px;margin-bottom:22px}
   .stat-num{font-size:36px}
@@ -638,15 +660,9 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
 <nav id="navbar">
   <a class="nav-logo" href="#home">
-    <div class="logo-hex">
-      <svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <polygon points="50,4 96,28 96,87 50,111 4,87 4,28" fill="#058283" stroke="#D4AF37" stroke-width="2.5"/>
-        <text x="50" y="52" font-family="'Bebas Neue',sans-serif" font-size="22" fill="#F4F0E6" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">K/AS</text>
-      </svg>
-    </div>
+    <div class="logo-hex"><img src="data:image/png;base64,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" alt="Kaizen Fitness Studia logo" width="48" height="48" style="display:block;"></div>
     <div>
-      <div class="nav-logo-text">KAIZEN FITNESS</div>
-      <span class="nav-logo-text"><span>STUDIA</span></span>
+      <div class="nav-logo-text">KAIZEN FITNESS<span>STUDIA</span></div>
     </div>
   </a>
   <ul class="nav-links">
@@ -672,7 +688,19 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg" role="img" aria-label="Kaizen Fitness Studia gym floor"></div>
+  <div class="hero-bg">
+    <img class="hero-bg-img"
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80"
+      srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80 800w,
+              https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80 1200w,
+              https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80 1600w"
+      sizes="100vw"
+      alt="Kaizen Fitness Studia gym floor — Bhopal's premier transformation center"
+      fetchpriority="high"
+      loading="eager"
+      decoding="sync"
+      width="1600" height="900">
+  </div>
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-content">
@@ -772,7 +800,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <div class="founder-top-row">
         <div class="founder-portrait-wrap">
           <div class="founder-portrait">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=85" alt="Founder and Certified Master Trainer at Kaizen Fitness Studia" loading="lazy" width="900" height="600">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=85" alt="Founder and Certified Master Trainer at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600">
           </div>
           <div class="founder-stats-strip">
             <div class="founder-stat-box"><strong>8+</strong><span>Years of Experience</span></div>
@@ -890,12 +918,12 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <p class="section-sub" style="margin-top:12px">World-class equipment, premium environment, zero compromises.</p>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="View: Main Gym Floor"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80" alt="Main Gym Floor at Kaizen Fitness Studia" loading="lazy" width="900" height="600"><div class="gallery-item-overlay"><span class="gallery-item-label">Main Gym Floor</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="View: Free Weights Zone"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Free Weights Zone" loading="lazy" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Free Weights Zone</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="View: Cardio Zone"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Cardio Zone" loading="lazy" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Cardio Zone</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="View: 1-on-1 Coaching"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="1-on-1 Coaching session" loading="lazy" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">1-on-1 Coaching</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="View: Strength Training"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="Strength Training area" loading="lazy" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Strength Training</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(5)" role="button" tabindex="0" aria-label="View: Community"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Community and Culture at Kaizen" loading="lazy" width="900" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Community &amp; Culture</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="View: Main Gym Floor"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80" alt="Main Gym Floor at Kaizen Fitness Studia" loading="lazy" fetchpriority="low" decoding="async" width="900" height="600"><div class="gallery-item-overlay"><span class="gallery-item-label">Main Gym Floor</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="View: Free Weights Zone"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Free Weights Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Free Weights Zone</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="View: Cardio Zone"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Cardio Zone" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Cardio Zone</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="View: 1-on-1 Coaching"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="1-on-1 Coaching session" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">1-on-1 Coaching</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="View: Strength Training"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="Strength Training area" loading="lazy" fetchpriority="low" decoding="async" width="600" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Strength Training</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(5)" role="button" tabindex="0" aria-label="View: Community"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Community and Culture at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="900" height="400"><div class="gallery-item-overlay"><span class="gallery-item-label">Community &amp; Culture</span></div></div>
     </div>
   </div>
 </section>
@@ -903,7 +931,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">×</button>
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
-  <img id="lightbox-img" src="" alt="" loading="lazy">
+  <img id="lightbox-img" src="" alt="" loading="lazy" fetchpriority="low" decoding="async">
   <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
 </div>
 
@@ -922,9 +950,9 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <div class="tg-stat-box"><span class="tg-stat-num">96%</span><span class="tg-stat-label">Member Satisfaction</span></div>
     </div>
     <div class="tg-grid-3 reveal" style="display:grid">
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Rohan K. before transformation" loading="lazy" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Rohan K. after losing 12kg at Kaizen" loading="lazy" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Priya S. before transformation" loading="lazy" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Priya S. after losing 15kg at Kaizen" loading="lazy" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
-      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Amit J. before transformation" loading="lazy" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="Amit J. after gaining 8kg muscle at Kaizen" loading="lazy" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Rohan K. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Rohan K. after losing 12kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Priya S. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Priya S. after losing 15kg at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
+      <div class="tg-ba-card"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Amit J. before transformation" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="Amit J. after gaining 8kg muscle at Kaizen" loading="lazy" fetchpriority="low" decoding="async" width="400" height="320"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider" aria-hidden="true"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
     </div>
     <div class="tg-cta-row reveal"><p>Ready to write your own transformation story?</p><button class="btn-primary" onclick="scrollTo('contact')">Start Your Free Trial Today</button></div>
   </div>
@@ -1065,7 +1093,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       <div class="contact-detail"><div class="contact-detail-icon" aria-hidden="true">📞</div><div><h4>Phone</h4><p><a href="tel:+917415927208" style="color:var(--text);text-decoration:none">+91 74159 27208</a></p></div></div>
       <div class="contact-detail"><div class="contact-detail-icon" aria-hidden="true">🕐</div><div><h4>Hours</h4><p>Mon–Sat: 5:00 AM – 10:00 PM<br>Sunday: 6:00 AM – 2:00 PM</p></div></div>
       <div class="map-wrap" onclick="window.open('https://maps.google.com/?q=Shubhalay+Vilas+Awadhpuri+Bhopal','_blank','')" role="button" tabindex="0" aria-label="Open location in Google Maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1247985907808!2d77.48152227531973!3d23.219284679036413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c417c639afe49%3A0xabb0eda1c802d716!2sKaizen%20Fitness%20Studia!5e1!3m2!1sen!2sin!4v1781197126086!5m2!1sen!2sin" width="600" height="450" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaizen Fitness Studia Location"></iframe>
+        <iframe id="mapFrame" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1247985907808!2d77.48152227531973!3d23.219284679036413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c417c639afe49%3A0xabb0eda1c802d716!2sKaizen%20Fitness%20Studia!5e1!3m2!1sen!2sin!4v1781197126086!5m2!1sen!2sin" width="600" height="450" style="border:0;background:var(--charcoal)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaizen Fitness Studia Location"></iframe>
         <div class="map-label">Open in Google Maps ↗</div>
       </div>
     </div>
@@ -1079,7 +1107,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
     <div class="footer-brand-statement"><p>Kaizen means <em>continuous improvement</em> — 1% better, every single day.</p></div>
     <div class="footer-brand">
       <div class="footer-logo-row">
-        <svg width="30" height="34" viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="50,4 96,28 96,87 50,111 4,87 4,28" fill="#058283" stroke="#D4AF37" stroke-width="2.5"/><text x="50" y="52" font-family="'Bebas Neue',sans-serif" font-size="22" fill="#F4F0E6" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">K/AS</text></svg>
+        <img src="data:image/png;base64,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" alt="Kaizen Fitness Studia" width="40" height="40" style="display:block;">
         <div class="footer-logo">KAIZEN FITNESS</div>
       </div>
       <div class="footer-tagline">Studia · Bhopal</div>
@@ -1306,8 +1334,9 @@ faqList.addEventListener('keydown',function(e){
   var indicator=document.getElementById('reviewsAutoIndicator');
   if(!vp||!track)return;
 
-  var isMobile=window.innerWidth<=900;
-  var CARD_W=isMobile?(Math.min(window.innerWidth-72,340)+16):(376);
+  var winW=window.innerWidth;
+  var isMobile=winW<=900;
+  var CARD_W=isMobile?(Math.min(winW-72,340)+16):(376);
   var SPEED=0.75,RESUME_DELAY=2500;
   var isDown=false,isDragging=false,startX=0,startScroll=0;
   var autoOn=true,idleTimer=null,rafId=null,lastTs=null,halfW=0;
@@ -1331,10 +1360,10 @@ faqList.addEventListener('keydown',function(e){
   rafId=requestAnimationFrame(loop);
 
   /* Mouse drag */
-  vp.addEventListener('mousedown',function(e){isDown=true;isDragging=false;startX=e.pageX-vp.offsetLeft;startScroll=vp.scrollLeft;vp.classList.add('dragging');setAuto(false);e.preventDefault();});
+  vp.addEventListener('mousedown',function(e){isDown=true;isDragging=false;var vpLeft=vp.getBoundingClientRect().left;startX=e.pageX-vpLeft;startScroll=vp.scrollLeft;vp.classList.add('dragging');setAuto(false);vp._vpLeft=vpLeft;e.preventDefault();});
   vp.addEventListener('mousemove',function(e){
     if(!isDown)return;
-    var walk=e.pageX-vp.offsetLeft-startX;
+    var walk=e.pageX-(vp._vpLeft||0)-startX;
     if(Math.abs(walk)>4)isDragging=true;
     vp.scrollLeft=startScroll-walk;
     if(vp.scrollLeft<0)vp.scrollLeft+=halfW;
@@ -1384,6 +1413,16 @@ faqList.addEventListener('keydown',function(e){
     entries.forEach(function(e){if(e.isIntersecting)setActive(e.target.id);});
   },{rootMargin:'-35% 0px -55% 0px',threshold:0});
   document.querySelectorAll('section[id]').forEach(function(s){secObs.observe(s);});
+})();
+
+/* ── DEFERRED MAP LOAD ── */
+(function(){
+  var frame=document.getElementById('mapFrame');
+  if(!frame)return;
+  var mapObs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting){frame.src=frame.dataset.src;mapObs.disconnect();}
+  },{rootMargin:'200px'});
+  mapObs.observe(frame);
 })();
 
 })();
