@@ -53,7 +53,7 @@
   --text:#F8F7F4;--muted:#8BAAAC;--text-secondary:#D9D4C8;
   --gold:#D4AF37;
   --bg-green:rgba(5,122,123,0.46);--bg-gold:rgba(212,175,55,0.2);--bg-gold-h:rgba(212,175,55,0.17);
-  --sp-lg:40px;--sp-xl:56px;
+  --sp-lg:28px;--sp-xl:44px;
   --fs-xs:11px;--fs-sm:13px;--fs-base:15px;
   --r-sm:3px;--r-md:6px;
   --tf:0.2s ease;--ts:0.35s ease;
@@ -92,7 +92,7 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.1}
 h2{font-size:clamp(36px,5.5vw,60px)}
 h2 em{color:var(--gold);font-style:italic}
 .section-sub{font-size:var(--fs-base);color:var(--cream-dim);max-width:580px;line-height:1.75}
-.section-header{margin-bottom:var(--sp-lg)}
+.section-header{margin-bottom:22px}
 
 /* ─── NAV ─── */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(14,23,24,.84),transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:padding var(--ts),background var(--ts),border-color var(--ts),box-shadow var(--ts);contain:layout}
@@ -103,8 +103,8 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 .nav-logo:hover .logo-hex img{filter:drop-shadow(0 2px 8px rgba(200,170,100,.4))}
 .nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:3px;color:var(--cream)}
 .nav-logo-text span{color:var(--gold);font-size:9px;display:block;font-family:'DM Sans',sans-serif;letter-spacing:2.5px;margin-top:-2px}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;transition:color var(--tf);padding-bottom:2px;border-bottom:1px solid transparent}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:var(--fs-xs);letter-spacing:1.5px;text-transform:uppercase;transition:color var(--tf);padding-bottom:2px;border-bottom:1px solid transparent;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--cream);border-bottom-color:rgba(212,175,55,.4)}
 .nav-links a.active{border-bottom-color:rgba(212,175,55,.55)}
 .nav-cta{background:var(--gold);color:var(--black);border:none;padding:9px 22px;font-family:'DM Sans',sans-serif;font-size:var(--fs-xs);font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background var(--tf),transform var(--tf),box-shadow var(--tf);border-radius:var(--r-sm)}
@@ -126,7 +126,7 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.035) 1px,transparent 1px);background-size:80px 80px;animation:gridPulse 10s ease-in-out infinite;will-change:opacity}
 @keyframes gridPulse{0%,100%{opacity:.3}50%{opacity:.8}}
 .hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,175,55,.07) 0%,transparent 70%);pointer-events:none}
-.hero-content{position:relative;text-align:center;max-width:860px;padding:var(--sp-xl) 24px;z-index:2}
+.hero-content{position:relative;text-align:center;max-width:860px;padding:32px 24px;z-index:2}
 .hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.5);padding:7px 18px;margin-bottom:28px;font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:rgba(14,23,24,.72);border-radius:var(--r-sm)}
 .hero-badge::before,.hero-badge::after{content:'';width:18px;height:1px;background:rgba(212,175,55,.6)}
 .hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8vw,96px);font-weight:300;line-height:1.08;color:var(--text);margin-bottom:16px}
@@ -152,7 +152,7 @@ nav.scrolled{background:rgba(14,23,24,.80);border-bottom:1px solid var(--bg-gree
 .hero-buttons .btn-outline:hover{opacity:1}
 
 /* ─── STATS ─── */
-.stats{background:linear-gradient(135deg,rgba(22,40,40,.88),rgba(5,90,91,.60));border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-gold);padding:32px 48px;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:inset 0 1px 0 rgba(212,175,55,.06)}
+.stats{background:linear-gradient(135deg,rgba(22,40,40,.88),rgba(5,90,91,.60));border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-gold);padding:20px 48px;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:inset 0 1px 0 rgba(212,175,55,.06)}
 .stat{text-align:center;padding:0 20px;position:relative}
 .stat:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);height:48px;width:1px;background:var(--bg-green)}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--gold);line-height:1;display:block}
@@ -169,9 +169,9 @@ section{position:relative}
 .pillar::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,.05),transparent);opacity:0;transition:opacity var(--ts)}
 .pillar:hover{background:rgba(27,48,50,.86);border-color:var(--bg-gold-h)}
 .pillar:hover::before{opacity:1}
-.pillar-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(212,175,55,.08);line-height:1;margin-bottom:-16px}
-.pillar-line{width:28px;height:2px;background:var(--gold);margin-bottom:18px}
-.pillar h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--text);margin-bottom:10px}
+.pillar-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(212,175,55,.08);line-height:1;margin-bottom:-12px}
+.pillar-line{width:28px;height:2px;background:var(--gold);margin-bottom:12px}
+.pillar h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--text);margin-bottom:6px}
 .pillar p{font-size:var(--fs-sm);color:var(--text-secondary);line-height:1.7}
 
 /* ─── TRANSFORM CTA ─── */
@@ -189,19 +189,20 @@ section{position:relative}
 .service-card::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--ts)}
 .service-card:hover::after{transform:scaleX(1)}
 .service-card:hover{background:var(--surface);border-color:var(--bg-gold-h)}
-.service-num{font-size:var(--fs-xs);letter-spacing:3px;color:var(--gold);margin-bottom:12px;opacity:.75}
+.service-num{font-size:var(--fs-xs);letter-spacing:3px;color:var(--gold);margin-bottom:8px;opacity:.75}
 .service-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;color:var(--text);margin-bottom:8px;line-height:1.2}
 .service-card p{font-size:var(--fs-sm);color:var(--text-secondary);line-height:1.7}
 .service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border:1px solid var(--bg-green);color:var(--muted);transition:border-color var(--tf),color var(--tf);border-radius:var(--r-sm)}
 .service-card:hover .tag{border-color:rgba(212,175,55,.28);color:var(--gold)}
-.service-icon{width:44px;height:44px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.16);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px;flex-shrink:0;transition:background var(--tf),border-color var(--tf)}
+.service-icon{width:44px;height:44px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.16);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;transition:background var(--tf),border-color var(--tf)}
 .service-icon svg{color:var(--gold);fill:var(--gold)}
 .service-card:hover .service-icon{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3)}
 
 /* ─── MEMBERSHIP ─── */
 .membership{background:linear-gradient(180deg,rgba(14,23,24,.80),rgba(15,30,32,.76));}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-green);border:1px solid var(--bg-green);border-radius:var(--r-md);overflow:visible}
+.plans-row2{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bg-green);border:1px solid var(--bg-green);border-top:none;border-radius:0 0 var(--r-md) var(--r-md);overflow:hidden;max-width:66.666%;margin:0 auto;width:100%}
 .plan{background:#152426;padding:28px;position:relative;border:1px solid transparent;transition:background var(--ts),border-color var(--tf);border-radius:0}
 .plan:hover{background:var(--surface);border-color:var(--bg-gold-h)}
 .plan.featured{background:linear-gradient(160deg,var(--forest-deep) 0%,rgba(14,23,24,.90) 100%);border:1px solid rgba(212,175,55,.4);margin:-1px;z-index:2;box-shadow:0 20px 64px rgba(0,0,0,.5),0 0 0 1px rgba(212,175,55,.16);border-radius:var(--r-md)}
@@ -223,8 +224,8 @@ section{position:relative}
 .trainers{background:linear-gradient(180deg,rgba(14,23,24,.84),rgba(27,48,50,.78));border-top:1px solid var(--bg-green);}
 
 /* ─── FOUNDER ─── */
-.founder-showcase{position:relative;margin:0 0 40px;background:linear-gradient(135deg,rgba(5,90,91,.66) 0%,rgba(22,40,40,.78) 50%,rgba(14,23,24,.88) 100%);border:1px solid rgba(212,175,55,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,.38)}
-.founder-showcase::after{content:'KAIZEN';position:absolute;right:-30px;bottom:-50px;font-family:'Bebas Neue',sans-serif;font-size:clamp(120px,16vw,240px);letter-spacing:14px;color:rgba(212,175,55,.025);line-height:1;pointer-events:none;z-index:0}
+.founder-showcase{position:relative;margin:0 0 28px;background:linear-gradient(135deg,rgba(5,90,91,.66) 0%,rgba(22,40,40,.78) 50%,rgba(14,23,24,.88) 100%);border:1px solid rgba(212,175,55,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,.38)}
+.founder-showcase::after{content:'KAIZEN';position:absolute;right:-30px;bottom:-50px;font-family:'Bebas Neue',sans-serif;font-size:clamp(120px,16vw,240px);letter-spacing:14px;color:rgba(212,175,55,.07);line-height:1;pointer-events:none;z-index:0}
 .founder-top-row{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);position:relative;z-index:1}
 .founder-portrait-wrap{position:relative;display:flex;flex-direction:column}
 .founder-portrait{position:relative;min-height:clamp(360px,42vw,560px);background:var(--forest-deep);overflow:hidden}
@@ -238,9 +239,9 @@ section{position:relative}
 .founder-stat-box strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1;color:var(--gold);font-weight:400}
 .founder-stat-box span{display:block;margin-top:5px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);line-height:1.35}
 .founder-qual-col{position:relative;border-left:1px solid var(--bg-gold);display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,3.5vw,44px);z-index:1}
-.founder-qual-box{background:linear-gradient(145deg,rgba(3,62,63,.88) 0%,rgba(212,175,55,.06) 60%,rgba(14,23,24,.76) 100%);border:1px solid rgba(212,175,55,.22);border-radius:18px;padding:24px;margin-bottom:20px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.2),inset 0 1px 0 rgba(212,175,55,.1)}
+.founder-qual-box{background:linear-gradient(145deg,rgba(3,62,63,.88) 0%,rgba(212,175,55,.06) 60%,rgba(14,23,24,.76) 100%);border:1px solid rgba(212,175,55,.22);border-radius:18px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.2),inset 0 1px 0 rgba(212,175,55,.1)}
 .founder-qual-box::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(212,175,55,.08),transparent 70%);pointer-events:none}
-.founder-qual-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(212,175,55,.14)}
+.founder-qual-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(212,175,55,.14)}
 .founder-qual-icon{width:48px;height:48px;flex-shrink:0;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.28);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
 .founder-qual-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--text);line-height:1.15}
 .founder-qual-role{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:2px}
@@ -264,7 +265,7 @@ section{position:relative}
 .founder-actions a{text-decoration:none}
 
 /* ─── TRAINERS GRID ─── */
-.trainers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px}
+.trainers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:20px}
 .trainer-card{position:relative;overflow:hidden;cursor:default;background:var(--charcoal);border-radius:var(--r-md);contain:layout style}
 .trainer-card:hover .trainer-img-wrap{transform:scale(1.03)}
 .trainer-card:hover .trainer-overlay{opacity:1}
@@ -296,7 +297,7 @@ section{position:relative}
 /* ─── REVIEWS ─── */
 .reviews{background:linear-gradient(180deg,rgba(22,40,40,.84),rgba(14,23,24,.78));padding:var(--sp-xl) 0;overflow:hidden;border-top:1px solid var(--bg-green);border-bottom:1px solid var(--bg-gold);}
 .reviews-inner{max-width:1400px;margin:0 auto;padding:0 48px}
-.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:var(--sp-lg);flex-wrap:wrap;gap:20px}
+.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:20px}
 .reviews-overall{display:flex;align-items:center;gap:20px;background:var(--forest-deep);border:1px solid var(--bg-green);padding:20px 28px;border-radius:var(--r-md)}
 .reviews-score{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--gold);line-height:1}
 .reviews-stars-row{display:flex;gap:3px;color:var(--gold);font-size:18px}
@@ -329,7 +330,7 @@ section{position:relative}
 /* ─── GALLERY ─── */
 .gallery{background:linear-gradient(180deg,rgba(14,23,24,.76),rgba(5,90,91,.42),rgba(14,23,24,.82));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--bg-green);}
 .gallery-inner{max-width:1400px;margin:0 auto}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:3px;margin-top:32px;border-radius:var(--r-md);overflow:hidden}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:3px;margin-top:20px;border-radius:var(--r-md);overflow:hidden}
 .gallery-item{position:relative;overflow:hidden;cursor:pointer;background:var(--charcoal);contain:layout}
 .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
 .gallery-item:nth-child(6){grid-column:span 2}
@@ -353,7 +354,7 @@ section{position:relative}
 /* ─── FAQ ─── */
 .faq{background:linear-gradient(180deg,rgba(22,40,40,.80),rgba(14,23,24,.84));border-top:1px solid var(--bg-green);}
 .faq-inner{max-width:880px;margin:0 auto}
-.faq-list{margin-top:32px;display:flex;flex-direction:column;gap:2px}
+.faq-list{margin-top:20px;display:flex;flex-direction:column;gap:2px}
 .faq-item{background:#152426;border:1px solid var(--bg-green);transition:border-color var(--tf);border-radius:var(--r-sm);overflow:hidden}
 .faq-item:not(.open):hover{border-color:var(--bg-gold-h)}
 .faq-item.open{border-color:rgba(212,175,55,.35)}
@@ -374,7 +375,7 @@ section{position:relative}
 .contact-left-inner{max-width:580px;margin-left:auto;position:relative;z-index:1}
 .contact-right{padding:var(--sp-xl) 48px;background:rgba(14,23,24,.68);display:flex;flex-direction:column;justify-content:center}
 .contact-right-inner{max-width:580px;width:100%}
-.contact-form{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.contact-form{display:flex;flex-direction:column;gap:10px;margin-top:18px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-group{display:flex;flex-direction:column;gap:6px}
 .form-group label{font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
@@ -413,11 +414,11 @@ section{position:relative}
 .tg-ba-meta{font-size:var(--fs-xs);color:var(--muted);letter-spacing:.5px;margin-top:2px}
 .tg-ba-result{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);line-height:1}
 .tg-ba-result span{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-family:'DM Sans',sans-serif;text-align:right;margin-top:2px}
-.tg-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bg-green);margin-bottom:24px;border:1px solid var(--bg-green);border-radius:var(--r-sm);overflow:hidden}
+.tg-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bg-green);margin-bottom:16px;border:1px solid var(--bg-green);border-radius:var(--r-sm);overflow:hidden}
 .tg-stat-box{background:#152426;padding:18px 14px;text-align:center}
 .tg-stat-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1;display:block}
 .tg-stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:5px;display:block}
-.tg-cta-row{margin-top:24px;text-align:center;padding:24px 0 0;border-top:1px solid var(--bg-green)}
+.tg-cta-row{margin-top:16px;text-align:center;padding:16px 0 0;border-top:1px solid var(--bg-green)}
 .tg-cta-row p{font-size:var(--fs-sm);color:var(--muted);margin-bottom:14px}
 
 /* ─── FOOTER ─── */
@@ -478,16 +479,22 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 .mobile-menu .btn-primary{margin-top:28px;width:100%;text-align:center;padding:17px;font-size:var(--fs-sm)}
 
 /* ─── RESPONSIVE 1100px ─── */
-@media(max-width:1100px){
-  nav{padding:16px 28px}
-  nav.scrolled{padding:11px 28px}
+@media(max-width:1300px){
+  nav{padding:18px 32px}
   .nav-links{gap:16px}
-  .nav-links a{font-size:10px;letter-spacing:1.5px}
+  .nav-links a{font-size:10px;letter-spacing:1.2px}
+}
+@media(max-width:1100px){
+  nav{padding:16px 24px}
+  nav.scrolled{padding:11px 24px}
+  .nav-links{gap:12px}
+  .nav-links a{font-size:9.5px;letter-spacing:1px}
+  .nav-cta{padding:8px 16px;font-size:9.5px;letter-spacing:1.5px}
 }
 
 /* ─── RESPONSIVE 900px ─── */
 @media(max-width:900px){
-  :root{--sp-xl:40px;--sp-lg:28px}
+  :root{--sp-xl:28px;--sp-lg:18px}
   body::before{position:absolute;background-size:72px 72px;opacity:.55}
   body::after{display:none}
   nav{padding:13px 18px}
@@ -532,6 +539,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   .cta-inner h2{font-size:clamp(26px,7.5vw,38px);margin-bottom:8px}
   .cta-inner p{margin-bottom:18px}
   .plans{grid-template-columns:1fr;border-radius:var(--r-sm)}
+  .plans-row2{grid-template-columns:1fr;max-width:100%;border-radius:0 0 var(--r-sm) var(--r-sm);border-top:1px solid var(--bg-green)}
   .plan{padding:22px 18px}
   .plan.featured{margin:0;border-left:3px solid var(--gold);box-shadow:none;border-radius:0}
   .plan.featured::before{display:none}
@@ -651,7 +659,6 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   .float-stack{bottom:calc(18px + env(safe-area-inset-bottom));right:14px}
   .float-btn{width:44px;height:44px}
   .float-btn--wa{width:50px;height:50px}
-  .float-btn--join{height:48px;padding:0 20px;min-width:120px;font-size:12px;letter-spacing:1.5px}
   .float-tooltip{display:none}
 }
 
@@ -672,8 +679,6 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   .tg-ba-result span{text-align:left}
   .trainer-img-wrap{height:220px}
   .footer-links{grid-template-columns:1fr}
-  .float-btn--join{height:44px;padding:0 16px;font-size:11px;min-width:100px}
-  .plan h3{font-size:24px}
   .plan-price{font-size:38px}
   .founder-stat-box strong{font-size:22px}
   .founder-stat-box span{font-size:8px}
@@ -700,7 +705,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 
 /* ─── RESPONSIVE 375px ─── */
 @media(max-width:375px){
-  :root{--sp-xl:32px;--sp-lg:22px}
+  :root{--sp-xl:22px;--sp-lg:14px}
   h2{font-size:clamp(24px,9.5vw,34px)}
   .hero-headline{font-size:28px}
   .hero-sub{font-size:12px}
@@ -757,7 +762,6 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
   .float-stack{right:8px;bottom:calc(14px + env(safe-area-inset-bottom))}
   .float-btn{width:40px;height:40px}
   .float-btn--wa{width:46px;height:46px}
-  .float-btn--join{height:40px;padding:0 14px;font-size:10px;min-width:90px}
   /* Footer */
   footer{padding:28px 12px calc(20px + env(safe-area-inset-bottom))}
   .footer-brand-statement p{font-size:15px}
@@ -770,9 +774,295 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 }
 /* ─── MOBILE ANIMATION BUDGET ─── */
 /* Freeze decorative looping animations on narrow viewports to cut GPU compositor layers */
+/* ─── SUB-HEAD TRAINER CARD ─── */
+.sub-trainer-card{
+  display:grid;grid-template-columns:280px 1fr;gap:0;
+  margin-top:32px;
+  background:linear-gradient(135deg,rgba(5,90,91,.52) 0%,rgba(22,40,40,.78) 50%,rgba(14,23,24,.88) 100%);
+  border:1px solid rgba(212,175,55,.22);border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 64px rgba(0,0,0,.36);
+  position:relative;
+}
+.sub-trainer-card::before{
+  content:'';position:absolute;top:0;left:0;width:3px;height:100%;
+  background:linear-gradient(to bottom,transparent,var(--gold) 40%,var(--gold) 60%,transparent);
+  z-index:2;
+}
+
+/* Left column */
+.sub-trainer-left{
+  display:flex;flex-direction:column;
+  background:linear-gradient(160deg,var(--forest-deep) 0%,var(--charcoal) 100%);
+  border-right:1px solid rgba(212,175,55,.14);
+}
+.sub-trainer-avatar-wrap{position:relative;flex:1;min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px 20px}
+.sub-trainer-avatar{
+  width:140px;height:140px;border-radius:50%;
+  background:linear-gradient(135deg,var(--forest-deep),var(--charcoal));
+  border:2px solid rgba(212,175,55,.28);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,.4),0 0 0 6px rgba(212,175,55,.06);
+}
+.sub-trainer-avatar-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--forest-deep),var(--charcoal) 60%,var(--black))}
+.sub-trainer-avatar-initials{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(212,175,55,.12);position:relative;z-index:1;line-height:1}
+.sub-trainer-avatar-icon{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:44px;height:44px;
+  background:rgba(14,23,24,.72);border:1px solid rgba(212,175,55,.2);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:20px;z-index:2;
+}
+.sub-trainer-badge{
+  margin-top:16px;
+  background:var(--gold);color:var(--black);
+  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 14px;border-radius:var(--r-sm);
+  box-shadow:0 4px 12px rgba(212,175,55,.28);
+}
+
+/* Stats grid inside left col */
+.sub-trainer-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(212,175,55,.08);
+  border-top:1px solid rgba(212,175,55,.14);
+}
+.sub-trainer-stat{
+  background:#152426;padding:14px 10px;text-align:center;
+  transition:background var(--tf);
+}
+.sub-trainer-stat:hover{background:rgba(27,48,50,.9)}
+.sub-trainer-stat-num{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);display:block;line-height:1}
+.sub-trainer-stat-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;display:block;line-height:1.3}
+
+/* Right column */
+.sub-trainer-right{padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px}
+.sub-trainer-name{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.5vw,52px);
+  letter-spacing:3px;color:var(--text);line-height:1;margin-bottom:6px;
+}
+.sub-trainer-role{
+  font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold);
+}
+.sub-trainer-bio{font-size:var(--fs-sm);color:var(--text-secondary);line-height:1.75;margin-top:-4px}
+.sub-trainer-certs{display:flex;flex-direction:column;gap:10px}
+.sub-trainer-certs-label{margin-bottom:2px}
+.sub-trainer-certs-list{display:flex;flex-direction:column;gap:8px}
+.sub-trainer-specialties{display:flex;flex-wrap:wrap;gap:6px;padding-top:4px;border-top:1px solid var(--bg-green)}
+
+/* ─── SUB-TRAINER RESPONSIVE ─── */
 @media(max-width:900px){
-  .hero-grid{animation:none;will-change:auto;opacity:.5}
-  .reviews-auto-indicator .dot{animation:none;will-change:auto}
+  .sub-trainer-card{grid-template-columns:1fr;margin-top:20px;border-radius:10px}
+  .sub-trainer-card::before{width:100%;height:3px;top:0;left:0;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent)}
+  .sub-trainer-left{border-right:none;border-bottom:1px solid rgba(212,175,55,.14)}
+  .sub-trainer-avatar-wrap{flex-direction:row;gap:20px;justify-content:flex-start;padding:20px 18px 16px}
+  .sub-trainer-avatar{width:90px;height:90px;flex-shrink:0}
+  .sub-trainer-avatar-initials{font-size:40px}
+  .sub-trainer-avatar-icon{width:32px;height:32px;font-size:14px}
+  .sub-trainer-badge{margin-top:0;align-self:flex-start}
+  .sub-trainer-stats{grid-template-columns:repeat(4,1fr)}
+  .sub-trainer-stat{padding:10px 6px}
+  .sub-trainer-stat-num{font-size:20px}
+  .sub-trainer-right{padding:18px;gap:14px}
+  .sub-trainer-name{font-size:clamp(28px,8vw,40px)}
+}
+@media(max-width:420px){
+  .sub-trainer-stats{grid-template-columns:repeat(2,1fr)}
+  .sub-trainer-avatar-wrap{flex-direction:column;align-items:center;text-align:center}
+}
+
+/* ── FLOAT BTN JOIN MOBILE ── */
+@media(max-width:900px){
+  .float-btn--join{
+    width:50px;height:50px;
+    padding:0;border-radius:50%;
+    font-size:0;letter-spacing:0;
+    min-width:unset;margin-top:0;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(212,175,55,.45);
+  }
+  .float-btn--join::after{
+    content:'JOIN';
+    font-family:'DM Sans',sans-serif;
+    font-size:9px;font-weight:800;
+    letter-spacing:1px;color:var(--black);
+    position:absolute;bottom:7px;left:50%;
+    transform:translateX(-50%);
+    white-space:nowrap;line-height:1;
+  }
+  .float-btn--join::before{
+    content:'⚡';
+    font-size:18px;
+    position:absolute;
+    top:7px;left:50%;
+    transform:translateX(-50%);
+    line-height:1;
+  }
+}
+@media(max-width:420px){
+  .float-btn--join{width:46px;height:46px}
+  .float-btn--join::after{font-size:8px;bottom:6px}
+  .float-btn--join::before{font-size:16px;top:6px}
+}
+@media(max-width:375px){
+  .float-btn--join{width:42px;height:42px}
+}
+
+/* ─── PERSONAL TRAINING ─── */
+.pt-section{
+  background:linear-gradient(180deg,rgba(14,23,24,.82),rgba(22,40,40,.86));
+  border-top:1px solid var(--bg-green);
+  border-bottom:1px solid var(--bg-green);
+  position:relative;overflow:hidden;
+}
+.pt-bg-text{
+  position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,13vw,200px);
+  letter-spacing:16px;white-space:nowrap;
+  color:rgba(212,175,55,.07);pointer-events:none;z-index:0;line-height:1;
+}
+.pt-wrap{position:relative;z-index:1}
+
+/* Split */
+.pt-split{display:grid;grid-template-columns:45% 55%;gap:clamp(32px,5vw,72px);align-items:center;margin-bottom:32px}
+
+/* Image column */
+.pt-image-col{position:relative}
+.pt-image-frame{position:relative;padding:0 0 24px 24px}
+.pt-image-accent-line{position:absolute;bottom:0;left:0;width:clamp(120px,40%,200px);height:2px;background:linear-gradient(90deg,transparent,var(--gold))}
+.pt-image-inner{
+  position:relative;border-radius:var(--r-md);overflow:hidden;
+  border:1px solid rgba(212,175,55,.22);
+  box-shadow:0 24px 72px rgba(0,0,0,.48),0 0 0 1px rgba(212,175,55,.08);
+}
+.pt-image-inner img{width:100%;height:clamp(380px,58vw,640px);object-fit:cover;object-position:center top;display:block;transition:transform .7s cubic-bezier(.25,.46,.45,.94)}
+.pt-image-inner:hover img{transform:scale(1.03)}
+.pt-image-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(14,23,24,.62) 100%),linear-gradient(135deg,rgba(212,175,55,.06),transparent 38%);pointer-events:none}
+.pt-image-badge{
+  position:absolute;bottom:20px;left:20px;
+  background:rgba(14,23,24,.88);border:1px solid rgba(212,175,55,.36);
+  border-radius:var(--r-md);padding:12px 16px;display:flex;align-items:center;gap:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+.pt-image-badge-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1}
+.pt-image-badge-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cream-dim);line-height:1.5}
+
+/* Content column */
+.pt-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.2vw,58px);font-weight:300;line-height:1.1;margin-bottom:18px;color:var(--text)}
+.pt-heading em{color:var(--gold);font-style:italic}
+.pt-desc{margin-bottom:28px}
+
+/* Benefits */
+.pt-benefits{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:28px}
+.pt-benefit{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid rgba(5,122,123,.2);transition:border-color var(--tf)}
+.pt-benefit:last-child{border-bottom:none}
+.pt-benefit:hover{border-color:rgba(212,175,55,.18)}
+.pt-benefit-icon{
+  width:28px;height:28px;flex-shrink:0;
+  background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.28);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--gold);transition:background var(--tf),border-color var(--tf);
+}
+.pt-benefit:hover .pt-benefit-icon{background:rgba(212,175,55,.16);border-color:rgba(212,175,55,.5)}
+.pt-benefit-text{font-size:var(--fs-sm);color:var(--text-secondary);letter-spacing:.3px;transition:color var(--tf)}
+.pt-benefit:hover .pt-benefit-text{color:var(--cream)}
+
+/* CTA row */
+.pt-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* Stats strip */
+.pt-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--bg-green);border:1px solid var(--bg-green);
+  border-radius:var(--r-md);overflow:hidden;
+  margin-bottom:32px;
+  box-shadow:inset 0 1px 0 rgba(212,175,55,.06);
+}
+.pt-stat{
+  background:linear-gradient(135deg,rgba(22,40,40,.88),rgba(5,90,91,.60));
+  text-align:center;padding:24px 16px;position:relative;
+  transition:background var(--tf);
+}
+.pt-stat:hover{background:rgba(27,48,50,.92)}
+.pt-stat:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);height:48px;width:1px;background:var(--bg-green)}
+
+/* Quote */
+.pt-quote{
+  margin:0 0 28px;
+  padding:20px 28px 20px 24px;
+  border-left:2px solid var(--gold);
+  background:linear-gradient(135deg,rgba(212,175,55,.04),rgba(5,90,91,.06));
+  border-radius:0 var(--r-md) var(--r-md) 0;
+  border-top:1px solid rgba(212,175,55,.08);
+  border-right:1px solid rgba(212,175,55,.06);
+  border-bottom:1px solid rgba(212,175,55,.08);
+  position:relative;overflow:hidden;
+}
+.pt-quote::before{
+  content:'\201C';font-family:'Cormorant Garamond',serif;font-size:120px;
+  color:rgba(212,175,55,.07);position:absolute;top:-20px;left:16px;line-height:1;pointer-events:none;
+}
+.pt-quote p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(18px,2.2vw,26px);font-weight:300;font-style:italic;
+  color:var(--cream);line-height:1.6;position:relative;z-index:1;
+}
+.pt-quote-footer{display:flex;align-items:center;gap:14px;margin-top:16px}
+.pt-quote-line{width:32px;height:1px;background:rgba(212,175,55,.4);flex-shrink:0}
+.pt-quote-attr{font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+
+/* Process */
+.pt-process .pt-process-header{margin-bottom:16px}
+.pt-timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:24px}
+.pt-timeline-track{position:absolute;top:22px;left:calc(10% + 8px);right:calc(10% + 8px);z-index:0;pointer-events:none}
+.pt-timeline-line{height:2px;background:var(--bg-green);border-radius:1px;overflow:hidden}
+.pt-timeline-progress{height:100%;width:0;background:linear-gradient(90deg,var(--gold),rgba(212,175,55,.5));border-radius:1px;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.pt-timeline.animated .pt-timeline-progress{width:100%}
+.pt-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;position:relative;z-index:1}
+.pt-step-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold);margin-bottom:8px;opacity:.7}
+.pt-step-dot{
+  width:18px;height:18px;border-radius:50%;
+  background:var(--charcoal);border:2px solid var(--bg-green);
+  margin-bottom:14px;flex-shrink:0;
+  transition:background var(--ts),border-color var(--ts),box-shadow var(--ts);
+}
+.pt-timeline.animated .pt-step-dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 12px rgba(212,175,55,.4)}
+.pt-step-title{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.5vw,18px);font-weight:600;color:var(--text);margin-bottom:6px;line-height:1.25}
+.pt-step-desc{font-size:var(--fs-xs);color:var(--muted);line-height:1.65;letter-spacing:.2px}
+
+/* ─── PT RESPONSIVE 900px ─── */
+@media(max-width:900px){
+  .pt-split{grid-template-columns:1fr;gap:32px;margin-bottom:var(--sp-lg)}
+  .pt-image-inner img{height:clamp(260px,68vw,400px)}
+  .pt-image-frame{padding:0 0 16px 16px}
+  .pt-stats{grid-template-columns:repeat(2,1fr)}
+  .pt-stat:nth-child(1)::after{content:'';display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);height:48px;width:1px;background:var(--bg-green)}
+  .pt-stat:nth-child(2)::after,.pt-stat:nth-child(4)::after{display:none}
+  .pt-stat:nth-child(3)::after{display:none}
+  .pt-stat{padding:18px 12px}
+  .pt-quote{padding:20px 20px 20px 18px;margin-bottom:var(--sp-lg)}
+  .pt-quote p{font-size:clamp(16px,5vw,20px)}
+  .pt-timeline{grid-template-columns:1fr;gap:0}
+  .pt-timeline-track{display:none}
+  .pt-step{flex-direction:row;align-items:flex-start;text-align:left;padding:16px 0;border-bottom:1px solid var(--bg-green);gap:16px}
+  .pt-step:last-child{border-bottom:none}
+  .pt-step-num{min-width:28px;margin-bottom:0;font-size:13px}
+  .pt-step-dot{flex-shrink:0;margin-bottom:0;margin-top:2px;width:14px;height:14px}
+  .pt-step-body{flex:1}
+  .pt-step-title{font-size:16px;margin-bottom:4px}
+  .pt-cta-row{flex-direction:column}
+  .pt-cta-row .btn-primary,.pt-cta-row .btn-outline{width:100%;text-align:center}
+  .pt-bg-text{display:none}
+}
+
+@media(max-width:420px){
+  .pt-image-badge{padding:8px 12px;gap:8px;bottom:14px;left:14px}
+  .pt-image-badge-num{font-size:28px}
+  .pt-stats{border-radius:var(--r-sm)}
+  .pt-stat{padding:14px 8px}
+  .pt-quote{padding:16px 14px 16px 14px}
+  .pt-heading{font-size:clamp(30px,9vw,40px)}
 }
 </style>
 </head>
@@ -787,7 +1077,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#trainers">Trainers</a></li>
+    <li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#trainers">Trainers</a></li><li><a href="#personal-training">Personal Training</a></li>
     <li><a href="#gallery">Gallery</a></li><li><a href="#transformations">Transformations</a></li><li><a href="#membership">Membership</a></li>
     <li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
   </ul>
@@ -798,7 +1088,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
 </nav>
 
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <a href="#about">About</a><a href="#services">Services</a><a href="#trainers">Trainers</a>
+  <a href="#about">About</a><a href="#services">Services</a><a href="#trainers">Trainers</a><a href="#personal-training">Personal Training</a>
   <a href="#gallery">Gallery</a><a href="#transformations">Transformations</a><a href="#membership">Membership</a>
   <a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
   <button class="btn-primary" onclick="scrollToSection('contact')">Book Free Trial</button>
@@ -881,7 +1171,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
     <div class="section-header reveal">
       <div class="eyebrow">What We Offer</div>
       <h2>Built to Transform<br><em>Every Body.</em></h2>
-      <p class="section-sub" style="margin-top:12px">Four pillars of training, each designed to accelerate your goals and forge the best version of you.</p>
+      <p class="section-sub" style="margin-top:12px">Six pillars of training, each designed to accelerate your goals and forge the best version of you.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
@@ -907,6 +1197,18 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
         <div class="service-num">04 — Functional Fitness</div><h3>Athletic Performance</h3>
         <p>Movement quality, mobility, and conditioning. Train for sport and life. Build a body that performs as well as it looks in the real world.</p>
         <div class="service-tags"><span class="tag">Mobility</span><span class="tag">Conditioning</span><span class="tag">Athletics</span></div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.4s">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <div class="service-num">05 — Nutrition Coaching</div><h3>Diet &amp; Nutrition Plans</h3>
+        <p>Personalised meal plans and macro-tracking built around your goals, food preferences, and lifestyle. Fuel your performance from the inside out.</p>
+        <div class="service-tags"><span class="tag">Macro Tracking</span><span class="tag">Meal Planning</span><span class="tag">Supplements</span></div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.5s">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <div class="service-num">06 — Group Training</div><h3>Group &amp; Batch Sessions</h3>
+        <p>High-energy group workouts led by certified coaches. Train alongside like-minded members, stay accountable, and push each other harder every session.</p>
+        <div class="service-tags"><span class="tag">Group Classes</span><span class="tag">Batch Training</span><span class="tag">Community</span></div>
       </div>
     </div>
   </div>
@@ -973,65 +1275,258 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
       </div>
     </div>
 
-    <!-- TRAINERS GRID -->
-    <div class="trainers-grid">
-      <div class="trainer-card reveal">
-        <div class="trainer-badge">Head Coach</div>
-        <div class="trainer-img-wrap"><div class="trainer-avatar"><div class="trainer-avatar-bg"></div><div class="trainer-avatar-initials">HK</div><div class="trainer-avatar-icon">🏋️</div></div></div>
-        <div class="trainer-front-bottom"><div class="trainer-front-name">HITESH</div><div class="trainer-front-role">Strength &amp; Hypertrophy</div></div>
-        <div class="trainer-overlay">
-          <div class="trainer-overlay-name">HITESH</div>
-          <div class="trainer-overlay-role">Head Coach — Strength &amp; Hypertrophy</div>
-          <p class="trainer-bio">8 years of competitive powerlifting experience. Specializes in progressive overload programming and elite body recomposition for serious athletes.</p>
-          <div class="trainer-stats"><div class="trainer-stat"><span class="trainer-stat-num">8+</span><span class="trainer-stat-label">Years Exp.</span></div><div class="trainer-stat"><span class="trainer-stat-num">150+</span><span class="trainer-stat-label">Clients</span></div><div class="trainer-stat"><span class="trainer-stat-num">3</span><span class="trainer-stat-label">Certs</span></div></div>
-          <div class="trainer-specialties"><span class="tag">Powerlifting</span><span class="tag">Hypertrophy</span></div>
+    <!-- SUB-HEAD TRAINER -->
+    <div class="sub-trainer-card reveal">
+      <!-- LEFT: AVATAR + STATS -->
+      <div class="sub-trainer-left">
+        <div class="sub-trainer-avatar-wrap">
+          <div class="sub-trainer-avatar">
+            <div class="sub-trainer-avatar-bg"></div>
+            <div class="sub-trainer-avatar-initials">HK</div>
+            <div class="sub-trainer-avatar-icon">🏋️</div>
+          </div>
+          <div class="sub-trainer-badge">Head Trainer</div>
         </div>
-        <div class="trainer-mobile-info">
-          <div class="trainer-overlay-name">HITESH</div><span class="trainer-overlay-role">Head Coach — Strength &amp; Hypertrophy</span>
-          <p class="trainer-bio">8 years of competitive powerlifting experience. Specializes in progressive overload programming and elite body recomposition for serious athletes.</p>
-          <div class="trainer-mobile-stats"><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">8+</span><span class="trainer-mobile-stat-label">Years Exp.</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">150+</span><span class="trainer-mobile-stat-label">Clients</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">3</span><span class="trainer-mobile-stat-label">Certs</span></div></div>
-          <div class="trainer-mobile-tags"><span class="tag">Powerlifting</span><span class="tag">Hypertrophy</span></div>
-        </div>
-      </div>
-
-      <div class="trainer-card reveal" style="transition-delay:.12s">
-        <div class="trainer-badge">Nutrition Coach</div>
-        <div class="trainer-img-wrap"><div class="trainer-avatar"><div class="trainer-avatar-bg"></div><div class="trainer-avatar-initials">SM</div><div class="trainer-avatar-icon">🥗</div></div></div>
-        <div class="trainer-front-bottom"><div class="trainer-front-name">SHALU</div><div class="trainer-front-role">Fat Loss &amp; Nutrition</div></div>
-        <div class="trainer-overlay">
-          <div class="trainer-overlay-name">SHALU</div>
-          <div class="trainer-overlay-role">Fat Loss &amp; Nutrition</div>
-          <p class="trainer-bio">Certified nutrition coach with 200+ successful transformations. Believes sustainable habits beat crash diets — every single time.</p>
-          <div class="trainer-stats"><div class="trainer-stat"><span class="trainer-stat-num">6+</span><span class="trainer-stat-label">Years Exp.</span></div><div class="trainer-stat"><span class="trainer-stat-num">200+</span><span class="trainer-stat-label">Transforms</span></div><div class="trainer-stat"><span class="trainer-stat-num">4</span><span class="trainer-stat-label">Certs</span></div></div>
-          <div class="trainer-specialties"><span class="tag">Fat Loss</span><span class="tag">Nutrition</span></div>
-        </div>
-        <div class="trainer-mobile-info">
-          <div class="trainer-overlay-name">SHALU</div><span class="trainer-overlay-role">Fat Loss &amp; Nutrition</span>
-          <p class="trainer-bio">Certified nutrition coach with 200+ successful transformations. Believes sustainable habits beat crash diets — every single time.</p>
-          <div class="trainer-mobile-stats"><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">6+</span><span class="trainer-mobile-stat-label">Years Exp.</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">200+</span><span class="trainer-mobile-stat-label">Transforms</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">4</span><span class="trainer-mobile-stat-label">Certs</span></div></div>
-          <div class="trainer-mobile-tags"><span class="tag">Fat Loss</span><span class="tag">Nutrition</span></div>
+        <!-- STATS -->
+        <div class="sub-trainer-stats">
+          <div class="sub-trainer-stat">
+            <span class="sub-trainer-stat-num">8+</span>
+            <span class="sub-trainer-stat-label">Years Exp.</span>
+          </div>
+          <div class="sub-trainer-stat">
+            <span class="sub-trainer-stat-num">150+</span>
+            <span class="sub-trainer-stat-label">Clients</span>
+          </div>
+          <div class="sub-trainer-stat">
+            <span class="sub-trainer-stat-num">3</span>
+            <span class="sub-trainer-stat-label">Certifications</span>
+          </div>
+          <div class="sub-trainer-stat">
+            <span class="sub-trainer-stat-num">98%</span>
+            <span class="sub-trainer-stat-label">Client Retention</span>
+          </div>
         </div>
       </div>
 
-      <div class="trainer-card reveal" style="transition-delay:.24s">
-        <div class="trainer-badge">Performance</div>
-        <div class="trainer-img-wrap"><div class="trainer-avatar"><div class="trainer-avatar-bg"></div><div class="trainer-avatar-initials">RV</div><div class="trainer-avatar-icon">⚡</div></div></div>
-        <div class="trainer-front-bottom"><div class="trainer-front-name">Rahul Verma</div><div class="trainer-front-role">Athletic Performance</div></div>
-        <div class="trainer-overlay">
-          <div class="trainer-overlay-name">Rahul Verma</div>
-          <div class="trainer-overlay-role">Athletic Performance</div>
-          <p class="trainer-bio">Former district-level sprinter. Builds athletes through mobility, conditioning, and sport-specific strength protocols that deliver real-world power.</p>
-          <div class="trainer-stats"><div class="trainer-stat"><span class="trainer-stat-num">5+</span><span class="trainer-stat-label">Years Exp.</span></div><div class="trainer-stat"><span class="trainer-stat-num">120+</span><span class="trainer-stat-label">Athletes</span></div><div class="trainer-stat"><span class="trainer-stat-num">2</span><span class="trainer-stat-label">Certs</span></div></div>
-          <div class="trainer-specialties"><span class="tag">Conditioning</span><span class="tag">Mobility</span></div>
+      <!-- RIGHT: CONTENT -->
+      <div class="sub-trainer-right">
+        <div class="sub-trainer-header">
+          <div class="eyebrow" style="margin-bottom:8px">Sub-Head Trainer</div>
+          <h3 class="sub-trainer-name">HITESH</h3>
+          <div class="sub-trainer-role">Strength &amp; Hypertrophy Coach</div>
         </div>
-        <div class="trainer-mobile-info">
-          <div class="trainer-overlay-name">Rahul Verma</div><span class="trainer-overlay-role">Athletic Performance</span>
-          <p class="trainer-bio">Former district-level sprinter. Builds athletes through mobility, conditioning, and sport-specific strength protocols that deliver real-world power.</p>
-          <div class="trainer-mobile-stats"><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">5+</span><span class="trainer-mobile-stat-label">Years Exp.</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">120+</span><span class="trainer-mobile-stat-label">Athletes</span></div><div class="trainer-mobile-stat"><span class="trainer-mobile-stat-num">2</span><span class="trainer-mobile-stat-label">Certs</span></div></div>
-          <div class="trainer-mobile-tags"><span class="tag">Conditioning</span><span class="tag">Mobility</span></div>
+
+        <p class="sub-trainer-bio">8 years of competitive powerlifting experience. Specializes in progressive overload programming, elite body recomposition, and precision form coaching for serious athletes and beginners alike.</p>
+
+        <!-- CERTIFICATIONS -->
+        <div class="sub-trainer-certs">
+          <div class="sub-trainer-certs-label">
+            <span class="founder-cert-badge"><span>✓</span> Certified Trainer</span>
+          </div>
+          <div class="sub-trainer-certs-list">
+            <div class="founder-cert-item">
+              <div class="founder-cert-dot">🎓</div>
+              <div class="founder-cert-text">
+                <strong>Certified Personal Trainer (CPT)</strong>
+                <em>International Sports Sciences Association · ISSA</em>
+              </div>
+            </div>
+            <div class="founder-cert-item">
+              <div class="founder-cert-dot">💪</div>
+              <div class="founder-cert-text">
+                <strong>Strength &amp; Conditioning Specialist</strong>
+                <em>Progressive Overload &amp; Hypertrophy Programming</em>
+              </div>
+            </div>
+            <div class="founder-cert-item">
+              <div class="founder-cert-dot">⚡</div>
+              <div class="founder-cert-text">
+                <strong>Functional Movement Specialist</strong>
+                <em>Mobility, Form Correction &amp; Injury Prevention</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPECIALTIES -->
+        <div class="sub-trainer-specialties">
+          <span class="tag">Powerlifting</span>
+          <span class="tag">Hypertrophy</span>
+          <span class="tag">Body Recomposition</span>
+          <span class="tag">Form Correction</span>
+          <span class="tag">Progressive Overload</span>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PERSONAL TRAINING -->
+<section class="pt-section" id="personal-training">
+  <div class="pt-bg-text" aria-hidden="true">PERSONAL TRAINING</div>
+  <div class="section-wrap pt-wrap">
+
+    <!-- SPLIT LAYOUT -->
+    <div class="pt-split reveal">
+      <!-- LEFT: IMAGE -->
+      <div class="pt-image-col">
+        <div class="pt-image-frame">
+          <div class="pt-image-inner">
+            <img
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=80&fm=webp"
+              srcset="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=75&fm=webp 600w,
+                      https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=75&fm=webp 900w"
+              sizes="(max-width:900px) 100vw, 45vw"
+              alt="Personal training session at Kaizen Fitness Studia"
+              loading="lazy"
+              width="900" height="1100"
+            >
+            <div class="pt-image-overlay"></div>
+            <div class="pt-image-badge">
+              <span class="pt-image-badge-num">1:1</span>
+              <span class="pt-image-badge-label">Dedicated<br>Coaching</span>
+            </div>
+          </div>
+          <div class="pt-image-accent-line"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: CONTENT -->
+      <div class="pt-content-col">
+        <div class="eyebrow">EXCLUSIVE COACHING</div>
+        <h2 class="pt-heading">One Coach.<br>One Plan.<br><em>One Transformation.</em></h2>
+        <p class="section-sub pt-desc">Every personal training journey is tailored around your goals, body type, and lifestyle. Our certified coaches create customized workout programs, provide nutrition guidance, monitor progress, and ensure proper technique so every session delivers measurable results.</p>
+
+        <!-- BENEFITS -->
+        <ul class="pt-benefits" aria-label="Personal training benefits">
+          <li class="pt-benefit reveal" style="transition-delay:.05s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Personalized Workout Program</span>
+          </li>
+          <li class="pt-benefit reveal" style="transition-delay:.1s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Certified Personal Trainer</span>
+          </li>
+          <li class="pt-benefit reveal" style="transition-delay:.15s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Weekly Progress Tracking</span>
+          </li>
+          <li class="pt-benefit reveal" style="transition-delay:.2s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Nutrition Guidance</span>
+          </li>
+          <li class="pt-benefit reveal" style="transition-delay:.25s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Form &amp; Technique Correction</span>
+          </li>
+          <li class="pt-benefit reveal" style="transition-delay:.3s">
+            <span class="pt-benefit-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="2,8 6,12 14,4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="pt-benefit-text">Flexible Training Schedule</span>
+          </li>
+        </ul>
+
+        <!-- CTA BUTTONS -->
+        <div class="pt-cta-row reveal" style="transition-delay:.35s">
+          <button class="btn-primary" onclick="scrollToSection('contact')">Start Your Personal Training</button>
+          <button class="btn-outline" onclick="scrollToSection('contact')">Talk to a Coach</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="pt-stats reveal" role="list">
+      <div class="pt-stat" role="listitem">
+        <span class="stat-num" data-target-pt="200">0+</span>
+        <span class="stat-label">Personal Training Clients</span>
+      </div>
+      <div class="pt-stat" role="listitem">
+        <span class="stat-num" data-target-pt="96">0%</span>
+        <span class="stat-label">Goal Achievement Rate</span>
+      </div>
+      <div class="pt-stat" role="listitem">
+        <span class="stat-num pt-stat-fixed">1:1</span>
+        <span class="stat-label">Dedicated Coaching</span>
+      </div>
+      <div class="pt-stat" role="listitem">
+        <span class="stat-num pt-stat-fixed">24/7</span>
+        <span class="stat-label">Coach Support</span>
+      </div>
+    </div>
+
+    <!-- QUOTE -->
+    <blockquote class="pt-quote reveal">
+      <p>"The difference between exercising and transforming is having someone who keeps you accountable."</p>
+      <footer class="pt-quote-footer">
+        <span class="pt-quote-line" aria-hidden="true"></span>
+        <span class="pt-quote-attr">Kaizen Fitness Studia</span>
+      </footer>
+    </blockquote>
+
+    <!-- PROCESS TIMELINE -->
+    <div class="pt-process reveal">
+      <div class="pt-process-header section-header">
+        <div class="eyebrow">THE JOURNEY</div>
+        <h2>Your <em>5-Step</em> Path</h2>
+      </div>
+      <div class="pt-timeline" role="list">
+        <div class="pt-timeline-track" aria-hidden="true">
+          <div class="pt-timeline-line"><div class="pt-timeline-progress"></div></div>
+        </div>
+        <div class="pt-step reveal" style="transition-delay:.0s" role="listitem">
+          <div class="pt-step-num" aria-hidden="true">01</div>
+          <div class="pt-step-dot" aria-hidden="true"></div>
+          <div class="pt-step-body">
+            <h3 class="pt-step-title">Consultation</h3>
+            <p class="pt-step-desc">We sit down to understand your goals, history, and lifestyle.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal" style="transition-delay:.08s" role="listitem">
+          <div class="pt-step-num" aria-hidden="true">02</div>
+          <div class="pt-step-dot" aria-hidden="true"></div>
+          <div class="pt-step-body">
+            <h3 class="pt-step-title">Fitness Assessment</h3>
+            <p class="pt-step-desc">Baseline measurements, movement screening, and strength testing.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal" style="transition-delay:.16s" role="listitem">
+          <div class="pt-step-num" aria-hidden="true">03</div>
+          <div class="pt-step-dot" aria-hidden="true"></div>
+          <div class="pt-step-body">
+            <h3 class="pt-step-title">Custom Program</h3>
+            <p class="pt-step-desc">Your coach builds a plan built exclusively around you.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal" style="transition-delay:.24s" role="listitem">
+          <div class="pt-step-num" aria-hidden="true">04</div>
+          <div class="pt-step-dot" aria-hidden="true"></div>
+          <div class="pt-step-body">
+            <h3 class="pt-step-title">Weekly Monitoring</h3>
+            <p class="pt-step-desc">Progress check-ins, adjustments, and accountability every week.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal" style="transition-delay:.32s" role="listitem">
+          <div class="pt-step-num" aria-hidden="true">05</div>
+          <div class="pt-step-dot" aria-hidden="true"></div>
+          <div class="pt-step-body">
+            <h3 class="pt-step-title">Transformation</h3>
+            <p class="pt-step-desc">Measurable results. A body — and mindset — rebuilt from the ground up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1090,7 +1585,7 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
     <div class="section-header reveal">
       <div class="eyebrow">Membership</div>
       <h2>Choose Your<br><em>Level.</em></h2>
-      <p class="section-sub" style="margin-top:12px">Three paths. One destination: the best version of you.</p>
+      <p class="section-sub" style="margin-top:12px">Five paths. One destination: the best version of you.</p>
     </div>
     <div class="plans">
       <div class="plan reveal">
@@ -1117,6 +1612,28 @@ footer{background:linear-gradient(180deg,rgba(14,23,24,.98),#0B1516);border-top:
         <div class="plan-badge">Elite</div><h3>Transformation</h3>
         <div class="plan-price">₹3,999 <span>/ month</span></div>
         <p class="plan-desc">The complete transformation package. Personal training, nutrition, and full tracking.</p>
+        <ul class="plan-features">
+          <li class="active">Full gym access</li><li class="active">All equipment</li><li class="active">Locker room</li>
+          <li class="active">Coaching support</li><li class="active">Custom nutrition plan</li><li class="active">Personal training</li>
+        </ul>
+        <button class="btn-outline" style="width:100%" onclick="scrollToSection('contact')">Get Started</button>
+      </div>
+    </div>
+    <div class="plans-row2">
+      <div class="plan reveal" style="transition-delay:.36s">
+        <div class="plan-badge">Quarterly</div><h3>Power Quarter</h3>
+        <div class="plan-price">₹2,499 <span>/ 3 months</span></div>
+        <p class="plan-desc">Lock in three months of consistent training at a discounted quarterly rate.</p>
+        <ul class="plan-features">
+          <li class="active">Full gym access</li><li class="active">All equipment</li><li class="active">Locker room</li>
+          <li class="active">Coaching support</li><li class="active">Diet guidance</li><li>Personal training</li>
+        </ul>
+        <button class="btn-outline" style="width:100%" onclick="scrollToSection('contact')">Get Started</button>
+      </div>
+      <div class="plan reveal" style="transition-delay:.48s">
+        <div class="plan-badge">Annual</div><h3>Legacy</h3>
+        <div class="plan-price">₹7,999 <span>/ year</span></div>
+        <p class="plan-desc">Our best value. A full year of premium access, coaching, and transformation support.</p>
         <ul class="plan-features">
           <li class="active">Full gym access</li><li class="active">All equipment</li><li class="active">Locker room</li>
           <li class="active">Coaching support</li><li class="active">Custom nutrition plan</li><li class="active">Personal training</li>
@@ -1479,32 +1996,46 @@ faqList.addEventListener('keydown',function(e){
   var indicator=document.getElementById('reviewsAutoIndicator');
   if(!vp||!track)return;
 
+  /* Clone original cards to create seamless infinite loop.
+     Track layout: [originals × N][clones × N]
+     scrollLeft lives in [halfW, 2*halfW) — wrap in both directions. */
+  var originals=Array.prototype.slice.call(track.querySelectorAll('.review-card'));
+  originals.forEach(function(card){
+    var clone=card.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    track.appendChild(clone);
+  });
+
   var winW=window.innerWidth;
   var isMobile=winW<=900;
-  var CARD_W=isMobile?(Math.min(winW-72,340)+16):(376);
-  var SPEED=0.75,RESUME_DELAY=2500;
+  var GAP=16;
+  var CARD_W=(isMobile?Math.min(winW-72,340):360)+GAP;
+  var SPEED=0.6,RESUME_DELAY=2000;
+  var halfW=originals.length*CARD_W;
+
+  /* Start at halfW so rightward scroll wraps seamlessly back to halfW */
+  vp.scrollLeft=halfW;
+
+  var autoOn=true,idleTimer=null,rafId=null,lastTs=null;
   var isDown=false,isDragging=false,startX=0,startScroll=0;
-  var autoOn=true,idleTimer=null,rafId=null,lastTs=null,halfW=0;
 
-  function calcHalf(){halfW=Math.floor(track.querySelectorAll('.review-card').length/2)*CARD_W;}
-  calcHalf();
-
+  function wrap(){
+    if(vp.scrollLeft<=0)vp.scrollLeft+=halfW;
+    else if(vp.scrollLeft>=2*halfW)vp.scrollLeft-=halfW;
+  }
   function setAuto(on){autoOn=on;indicator&&indicator.classList.toggle('paused',!on);}
   function resume(){setAuto(true);}
   function pauseTemp(){setAuto(false);clearTimeout(idleTimer);idleTimer=setTimeout(resume,RESUME_DELAY);}
 
   function loop(ts){
     if(lastTs===null)lastTs=ts;
-    var dt=ts-lastTs;lastTs=ts;
-    if(autoOn){
-      vp.scrollLeft+=SPEED*(dt/16.67);
-      if(vp.scrollLeft>=halfW)vp.scrollLeft-=halfW;
-    }
+    var dt=Math.min(ts-lastTs,50);lastTs=ts;
+    if(autoOn){vp.scrollLeft-=SPEED*(dt/16.67);wrap();}
     rafId=requestAnimationFrame(loop);
   }
   rafId=requestAnimationFrame(loop);
 
-  /* ── Pause RAF when carousel scrolls off-screen ── */
+  /* Pause RAF when off-screen */
   (new IntersectionObserver(function(entries){
     var vis=entries[0].isIntersecting;
     if(vis&&!rafId){lastTs=null;rafId=requestAnimationFrame(loop);}
@@ -1512,44 +2043,68 @@ faqList.addEventListener('keydown',function(e){
   },{rootMargin:'200px 0px 200px 0px'})).observe(document.getElementById('reviews')||vp);
 
   /* Mouse drag */
-  vp.addEventListener('mousedown',function(e){isDown=true;isDragging=false;var vpLeft=vp.getBoundingClientRect().left;startX=e.pageX-vpLeft;startScroll=vp.scrollLeft;vp.classList.add('dragging');setAuto(false);vp._vpLeft=vpLeft;e.preventDefault();});
+  vp.addEventListener('mousedown',function(e){
+    isDown=true;isDragging=false;startX=e.pageX;startScroll=vp.scrollLeft;
+    vp.classList.add('dragging');setAuto(false);e.preventDefault();
+  });
   vp.addEventListener('mousemove',function(e){
     if(!isDown)return;
-    var walk=e.pageX-(vp._vpLeft||0)-startX;
+    var walk=e.pageX-startX;
     if(Math.abs(walk)>4)isDragging=true;
-    vp.scrollLeft=startScroll-walk;
-    if(vp.scrollLeft<0)vp.scrollLeft+=halfW;
-    if(vp.scrollLeft>=halfW)vp.scrollLeft-=halfW;
+    vp.scrollLeft=startScroll-walk;wrap();
   });
   function endDrag(){if(!isDown)return;isDown=false;vp.classList.remove('dragging');clearTimeout(idleTimer);idleTimer=setTimeout(resume,RESUME_DELAY);}
   vp.addEventListener('mouseup',endDrag);
   vp.addEventListener('mouseleave',endDrag);
-  vp.addEventListener('mouseenter',function(){if(autoOn){setAuto(false);clearTimeout(idleTimer);}});
+  vp.addEventListener('mouseenter',function(){pauseTemp();});
   document.addEventListener('mouseleave',function(){if(!autoOn&&!isDown)resume();});
 
   /* Touch */
   var txStart=0,tsScroll=0;
   vp.addEventListener('touchstart',function(e){txStart=e.touches[0].pageX;tsScroll=vp.scrollLeft;pauseTemp();},{passive:true});
-  vp.addEventListener('touchmove',function(e){
-    var dx=txStart-e.touches[0].pageX;
-    vp.scrollLeft=tsScroll+dx;
-    if(vp.scrollLeft<0)vp.scrollLeft+=halfW;
-    if(vp.scrollLeft>=halfW)vp.scrollLeft-=halfW;
-  },{passive:true});
+  vp.addEventListener('touchmove',function(e){vp.scrollLeft=tsScroll-(e.touches[0].pageX-txStart);wrap();},{passive:true});
   vp.addEventListener('touchend',function(){clearTimeout(idleTimer);idleTimer=setTimeout(resume,RESUME_DELAY);});
-
-  /* Wrap on manual scroll */
-  vp.addEventListener('scroll',function(){
-    if(vp.scrollLeft>=halfW)vp.scrollLeft-=halfW;
-    else if(vp.scrollLeft<0)vp.scrollLeft+=halfW;
-  },{passive:true});
 
   /* Click guard */
   vp.addEventListener('click',function(e){if(isDragging){e.stopPropagation();isDragging=false;}},true);
 
   /* Nav buttons */
-  prevBtn&&prevBtn.addEventListener('click',function(){pauseTemp();vp.scrollLeft-=CARD_W;if(vp.scrollLeft<0)vp.scrollLeft+=halfW;});
-  nextBtn&&nextBtn.addEventListener('click',function(){pauseTemp();vp.scrollLeft+=CARD_W;if(vp.scrollLeft>=halfW)vp.scrollLeft-=halfW;});
+  prevBtn&&prevBtn.addEventListener('click',function(){pauseTemp();vp.scrollLeft-=CARD_W;wrap();});
+  nextBtn&&nextBtn.addEventListener('click',function(){pauseTemp();vp.scrollLeft+=CARD_W;wrap();});
+})();
+
+/* ── PERSONAL TRAINING ── */
+(function(){
+  /* Stats counter — reuses animateCounter but with '%' / '+' suffix logic */
+  var ptStats=document.querySelector('.pt-stats');
+  if(ptStats){
+    var ptStatsObs=new IntersectionObserver(function(entries){
+      if(!entries[0].isIntersecting)return;
+      ptStatsObs.disconnect();
+      ptStats.querySelectorAll('[data-target-pt]').forEach(function(el){
+        var target=+el.dataset.targetPt;
+        var suffix=el.textContent.replace(/[0-9]/g,'').trim(); /* '+' or '%' */
+        var start=0,step=target/80;
+        var timer=setInterval(function(){
+          start+=step;
+          if(start>=target){el.textContent=target+suffix;clearInterval(timer);}
+          else el.textContent=Math.floor(start)+suffix;
+        },16);
+      });
+    },{threshold:0.5});
+    ptStatsObs.observe(ptStats);
+  }
+
+  /* Timeline line grows when visible */
+  var ptTimeline=document.querySelector('.pt-timeline');
+  if(ptTimeline){
+    var tlObs=new IntersectionObserver(function(entries){
+      if(!entries[0].isIntersecting)return;
+      tlObs.disconnect();
+      ptTimeline.classList.add('animated');
+    },{threshold:0.3});
+    tlObs.observe(ptTimeline);
+  }
 })();
 
 /* ── ACTIVE NAV ── */
